@@ -30,7 +30,7 @@ MsCacheV2 is a Microsoft implementation of local password storage for domain use
 If an attacker can gain elevated system privileges on a compromised host, the attacker could gather MsCachV2 credentials using a variety of toolsets. These hashes could then be potentially cracked using the PBKDF2 hashing algorithm, which uses the “Username” as the known salt value. Leaving credentials to potentially be used for further lateral movement or compromise of internal domain systems.  
 
 ## Recommendation(s)
-The assessment team recommended that MsCacheV2 credential caching is limited to three accounts at any given time. If this is not possible due to business requirements, this acceptable number can be easily adjusted. One method of managing this would be setting this within the default GPO (Group Policy Objects). 
+The assessment team recommends that MsCacheV2 credential caching is limited to three accounts at any given time. If this is not possible due to business requirements, this acceptable number can be easily adjusted. One method of managing this would be setting this within the default GPO (Group Policy Objects). 
 
 # Finding Metadata
   * Author(s)
