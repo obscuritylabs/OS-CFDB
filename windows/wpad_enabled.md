@@ -37,7 +37,7 @@ It is recommended that security best practice be followed which includes complet
   * Author(s)
     * Alexander Rymdeko-Harvey (@Killswitch-GUI)
   * Source(s)
-    * http://
+    * https://github.com/mubix/cfdb/blob/master/Windows/WPAD.md
   * Created
     * 09/27/2017
   * Updated
