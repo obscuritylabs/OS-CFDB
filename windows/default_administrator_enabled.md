@@ -31,7 +31,7 @@ The default administrator account is often used during initial setup of a host, 
 If an attacker can gain elevated system privileges on a compromised host, the attacker could gather clear-text and the NTLM hash of this account. This could be used to further access or lateral spread mechanisms such as Pass-The-Hash attacks where other machines use this same password. 
 
 
-# Recommendation(s)
+## Recommendation(s)
 It is recommended disable the built-in Administrator if business requirements allow for it. This account should only be used during initial setup and disaster recovery if possible. If this isn’t possible its recommend to use a solution such as LAPS (Local Administrator Password Solution) or enroll in third party solutions to randomize and manage bulk password management.
 
 # Finding Metadata
