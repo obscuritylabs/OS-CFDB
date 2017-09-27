@@ -12,9 +12,12 @@
 ## Service
   * Internal Penetration Testing
   * External Penetration Testing 
+## NIST 800-53 
+  * AC-6
 ## Refrences
   * https://attack.mitre.org/wiki/Technique/T1088
   * https://technet.microsoft.com/en-us/library/dd744293(v=ws.10).aspx
+  * https://nvd.nist.gov/800-53/Rev4/control/AC-6
  
 # Technical Information
 
