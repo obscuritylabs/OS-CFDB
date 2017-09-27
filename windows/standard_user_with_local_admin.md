@@ -6,6 +6,4 @@
 ## Risk Level
   3
   
------
-
 # Technical Information
