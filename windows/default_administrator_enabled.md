@@ -20,6 +20,7 @@
   * IA-3
 ## Refrences
   * https://nvd.nist.gov/800-53/Rev4/control/IA-2
+  * https://technet.microsoft.com/en-us/mt227395.aspx
  
 # Technical Information
 
