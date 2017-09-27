@@ -3,9 +3,16 @@
 
 ## Name
   Standard User with Local Admin 
-## Risk Level
+## SVR
   3
-  
+## CVSS
+  4.0-5.9
+## Risk
+  Medium
+## Service
+  * Internal Penetration Testing
+  * External Penetration Testing 
+ 
 # Technical Information
 
 ## Description 
