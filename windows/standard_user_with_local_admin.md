@@ -2,8 +2,8 @@
 # Finding Details 
 
 ## Name
-Standard User with Local Admin 
+  Standard User with Local Admin 
 ## Risk Level
-3
+  3
 
 # Technical Information
