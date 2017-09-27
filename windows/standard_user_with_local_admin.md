@@ -14,6 +14,7 @@
   * External Penetration Testing 
 ## Refrences
   * https://attack.mitre.org/wiki/Technique/T1088
+  * https://technet.microsoft.com/en-us/library/dd744293(v=ws.10).aspx
  
 # Technical Information
 
