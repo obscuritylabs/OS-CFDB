@@ -32,7 +32,7 @@ It is recommended that the least privileged model is followed when assessing if 
 
 # Finding Metadata
   * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI
+    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
   * Source(s)
   * Created
     * 09/27/2017
