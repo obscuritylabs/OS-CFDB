@@ -29,7 +29,7 @@
 ## Impact
 {.....}
 
-# Recommendation(s)
+## Recommendation(s)
 {.....}
 
 # Finding Metadata
