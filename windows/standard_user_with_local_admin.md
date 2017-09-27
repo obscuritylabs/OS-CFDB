@@ -1,8 +1,8 @@
 
 # Finding Details 
-## Name
+-- Name
 Standard User with Local Admin 
-## Risk 
+-- Risk 
 3
 
 # Technical Information
