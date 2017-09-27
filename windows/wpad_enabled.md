@@ -30,7 +30,7 @@ WPAD (Web Proxy Auto Discovery Protocol) affects any system that has "Auto Disco
 This could allow an attacker using host or network based toolsets to gather clear-text credentials over the network. This can lead to SMB or HTTP relay attacks of NTLM credentials and code execution in certain conditions. In certain cases, this attack can allow and attacker to also perform privilege escalation from a normal local/domain user. 
 
 
-# Recommendation(s)
+## Recommendation(s)
 It is recommended that security best practice be followed which includes completely disabling WPAD. Windows has however a per-user and per-system proxy settings, this can be corrected with logon scripts, GPO settings and registry edits to the baseline image.
 
 # Finding Metadata
