@@ -31,12 +31,12 @@ Server Message Block (SMB) is the file protocol most commonly used by Windows. T
 
 
 ## Impact
-If an attacker gains access to the LAN (Local Area Network) they will be able to send specifically crafted packets using LLMNR spoofing to direct network share access quires to the attacker. Using this MITM (Man-In-The-Middle) attack they will be able to capture NTLM and NTLMv2 (Windows Challenge/Response Protocol) credentials and potentially brute force these to gain access to recourses on the network. 
+If an attacker gains access to the LAN (Local Area Network), it enables the ability to send specially crafted packets using LLMNR (Link-Local Multicast Name Resolution) spoofing to direct network share access queries to the attacker. Using this MITM (Man-In-The-Middle) attack, an attacker can capture NTLM and NTLMv2 (Windows Challenge/Response Protocol) credentials and potentially brute force these to gain access to resources on the network. 
 
 
 
 ## Recommendation(s)
-It is recommended that SMB singing is enabled via GPO policy or via registry for the SDA Campus Network. If this is not possible due to business constraints core servers and resources should enable SMB signing to prevent GPO tampering or credential compromise of high value accounts.  
+The assessment team recommends that SMB signing enabled via GPO policy or registry for the In-Scope network hosts. If this is not possible due to business constraints, core servers and resources should allow SMB signing to prevent GPO tampering or credential compromise of high-value accounts.  
 
 # Finding Metadata
   * Author(s)
