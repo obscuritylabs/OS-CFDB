@@ -31,9 +31,7 @@ The assessment team recommends removing the "GenericAll/GenericWrite" attribute 
 # Finding Metadata
   * Author(s)
     * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-    * Rob Fuller (@Mubix)
   * Source(s)
-    *https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md
   * Created
     * 09/27/2017
   * Updated
