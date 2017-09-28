@@ -17,6 +17,7 @@
 ## Refrences
   * https://www.blackhat.com/docs/us-17/wednesday/us-17-Robbins-An-ACE-Up-The-Sleeve-Designing-Active-Directory-DACL-Backdoors-wp.pdf  
   * https://msdn.microsoft.com/en-us/library/windows/desktop/aa446597(v=vs.85).aspx
+  * https://blogs.technet.microsoft.com/pfesweplat/2017/01/28/forensics-active-directory-acl-investigation/
   
 # Technical Information
 
