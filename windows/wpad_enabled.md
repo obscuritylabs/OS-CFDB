@@ -24,14 +24,14 @@
 # Technical Information
 
 ## Description 
-WPAD (Web Proxy Auto Discovery Protocol) affects any system that has "Auto Discovery Proxy Settings" turned on, it should be noted this is default behavior within Windows. This is often used in environments, but can present an attack surface if a host is compromised, or allow an attacker to gain access to an internal LAN.
+WPAD (Web Proxy Auto-Discovery Protocol) affects any system that has "Auto Discovery Proxy Settings" turned on, this is default behavior within Windows. WPAD can often be used in environments but can present an attack surface if a host is compromised, or allow an attacker to gain access to an internal LAN (Local Area Network).
 
 ## Impact
-This could allow an attacker using host or network based toolsets to gather clear-text credentials over the network. This can lead to SMB or HTTP relay attacks of NTLM credentials and code execution in certain conditions. In certain cases, this attack can allow and attacker to also perform privilege escalation from a normal local/domain user. 
+Leaving WPAD enabled could allow an attacker using host or network-based toolsets to gather clear-text credentials over the network. These attacks can lead to SMB or HTTP relay attacks of NTLM credentials and code execution in certain conditions. In certain cases, this attack can allow an attacker to also perform privilege escalation from a normal local/domain user. 
 
 
 ## Recommendation(s)
-It is recommended that security best practice be followed which includes completely disabling WPAD. Windows has however a per-user and per-system proxy settings, this can be corrected with logon scripts, GPO settings and registry edits to the baseline image.
+The assessment team recommends following security best practices, by completely disabling WPAD. Windows has, however, a per-user and per-system proxy settings. Remediated with login scripts, GPO settings and registry edits can significantly increase the security of the network.
 
 # Finding Metadata
   * Author(s)
