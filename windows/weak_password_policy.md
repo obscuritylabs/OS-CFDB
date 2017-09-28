@@ -2,42 +2,38 @@
 # Finding Details 
 
 ## Title
-  Weak SPN Password 
+  Weak Password Policy 
 ## SVR
-  5
+  3
 ## CVSS
-  8.0 – 10.0
+  4.0-5.9
 ## Risk
-  Critical
+  Medium
 ## Service
   * Internal Penetration Testing
   * External Penetration Testing 
 ## NIST 800-53 
-  * 
+  * IA-2
+  * IA-7
 ## Refrences
-  * https://adsecurity.org/?p=2011
-  * https://msdn.microsoft.com/en-us/library/ms677949(v=vs.85).aspx
-  * https://msdn.microsoft.com/en-us/library/windows/desktop/ms684272(v=vs.85).aspx
-  * https://blog.netspi.com/faster-domain-escalation-using-ldap/
-  * https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts
+  * https://technet.microsoft.com/en-us/library/cc731699(v=ws.11).aspx
+  * https://technet.microsoft.com/en-us/library/cc786468(v=ws.10).aspx
  
 # Technical Information
 
 ## Description 
-Service Principal Names (SPNs) are a Microsoft way of designating and identifying where services are running in a domain. These SPNs are attached to accounts within active directory. Any Domain User has the ability to lookup these attributes and request access to the service they provide. The Active Directory Domain Controller issues the requesting user access to the service a Kerberos ticket. This ticket includes the encrypted and hashed password for the user of the service. Microsofts Kerberos implementation does this to allow access to the requested resource even if the client does not have the account name
+The strength of a password policy is a combination of length, complexity, and predictability. Failure to implement a strong password may result in unauthorized access to a system or application.  A strong password policy can protect an organization from brute-force password cracking, guessing, and reuse.
 
 ## Impact
-If an attacker gains access to any user within the domain, they can start to request SPNs service tickets for all requested services within the domain. Once these tickets are collected, and they are running under standard user, the attacker can attempt to crack the passwords using the Kerberos 5 TGS-REP standard. If a ticket is cracked, the attacker can then access the service or utilize that password to further their access within the domain impersonating that service account. 
+If a strong password policy is absent, reverse brute-force and password guessing attacks can take place. These attacks can lead to further system compromise of domain access in a unauthenticated scenario.
 
 ## Recommendation(s)
-The assessment team recommends removing SPNs and migrating to Managed Service Accounts (MSAs). MAS is designed to provide services and tasks such as Windows services to share their domain accounts while eliminating the need for an administrator to administer passwords for these accounts manually. It is a managed domain account that provides automatic password management. If business requirements do not allow for MSA migration, guarantee all service accounts use the proper password complexity. Changing passwords of affected accounts to applicable industry best practices and company-defined requirements. 
+Enforce password policy on all systems by applicable industry best practices, and company-defined requirements. Corporate password policy should be enforced via GPO (Group Policy Objects).
 
 # Finding Metadata
   * Author(s)
     * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-    * Rob Fuller (@Mubix)
   * Source(s)
-    *https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md
   * Created
     * 09/27/2017
   * Updated
