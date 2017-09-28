@@ -37,7 +37,7 @@ The assessment team recommends removing SPNs and migrating to Managed Service Ac
     * Alexander Rymdeko-Harvey (@Killswitch-GUI)
     * Rob Fuller (@Mubix)
   * Source(s)
-    *https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md
+    * https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md
   * Created
     * 09/27/2017
   * Updated
