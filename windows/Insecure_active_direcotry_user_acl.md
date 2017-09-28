@@ -13,7 +13,7 @@
   * Internal Penetration Testing
   * External Penetration Testing 
 ## NIST 800-53 
-  * 
+  * AC-6
 ## Refrences
   * https://www.blackhat.com/docs/us-17/wednesday/us-17-Robbins-An-ACE-Up-The-Sleeve-Designing-Active-Directory-DACL-Backdoors-wp.pdf  
   * https://msdn.microsoft.com/en-us/library/windows/desktop/aa446597(v=vs.85).aspx
