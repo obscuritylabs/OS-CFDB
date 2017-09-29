@@ -16,7 +16,8 @@
   * SC-32
   * SC-7
 ## Refrences
-  * 
+  * https://www.cisco.com/c/en/us/about/security-center/framework-segmentation.html
+  * https://www.sans.org/reading-room/whitepapers/bestprac/infrastructure-security-architecture-effective-security-monitoring-36512
   
 # Technical Information
 
