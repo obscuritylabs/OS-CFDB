@@ -17,6 +17,10 @@ This project aims to provide a single source of common findings seen on Web Appl
 |  Level 2 |  2.0 – 3.9 | The vulnerability may allow: information leakage, such as software distribution or version information that may be used by an attacker to research potential attacks against a host or application.  |
 |  Level 1 |  0.0 -1.9 |  The vulnerability may allow: exposure of general information about a host or application. |
 
+# Current Finding Tree
+
+## Windows 
+[Insecure File Shares](windows/insecure_file_shares.md)
 
 # License Data
 
