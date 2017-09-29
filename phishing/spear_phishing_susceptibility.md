@@ -1,7 +1,7 @@
 # Finding Details 
 
 ## Title
-  Spear Phishing Suseptiablity 
+  Spear Phishing Susceptibility 
 ## SVR
   3
 ## CVSS
