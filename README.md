@@ -26,6 +26,10 @@ The data within this project is broken out into multiple headers and lists; this
 
  ### Technical Information 
  
+ * Description - 
+ * Impact - 
+ * Recommendation(s) -
+ 
  ### Finding Metadata
 
 ## How the Data is Supplied
