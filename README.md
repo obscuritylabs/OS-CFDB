@@ -5,7 +5,7 @@ This project aims to provide a single source of common findings seen on Web Appl
 
 ### How the Data is Supplied
  * JSON - Will allow for serializable data structures or integration into many other solutions.
- * MD - MarkDown is a way to display structured text. 
+ * MD - MarkDown is a way to display structured text and allow readers to view the findings easily.
 
 |  Vulnerability Severity Rating |  Vulnerability Severity Rating |  Vulnerability Severity Rating |
 |:-:|:-:|---|
