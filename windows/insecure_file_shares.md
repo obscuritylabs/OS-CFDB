@@ -16,7 +16,7 @@
   * AC-1
   * AC-3
   * AC-6
- ## Refrences
+ ## References
   * https://technet.microsoft.com/en-us/library/cc754178(v=ws.11).aspx
   * https://technet.microsoft.com/en-us/library/cc772184(v=ws.11).aspx
   
