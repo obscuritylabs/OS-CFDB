@@ -1,7 +1,11 @@
-# OS-CFDB: Open Source - Common Findings Data Base (JSON &amp; MD)
-
+# OS-CFDB: Open Source - Common Findings Data Base
 This project aims to provide a single source of common findings seen on Web Application, Network, and Red Team assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
 
+## How to Interpret the Data
+
+### How the Data is Supplied
+ * JSON - Will allow for serializable data structures or integration into many other solutions.
+ * MD - MarkDown is a way to display structured text. 
 
 |  Vulnerability Severity Rating |  Vulnerability Severity Rating |  Vulnerability Severity Rating |
 |:-:|:-:|---|
