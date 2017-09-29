@@ -14,7 +14,6 @@ Open Source - Common Findings Data Base (JSON &amp; MD)
 
 
 # License Data
------
 
 BSD 3-Clause License
 
