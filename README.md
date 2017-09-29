@@ -12,7 +12,15 @@ The data within this project is broken out into multiple headers and lists; this
  Each major section contains multiple sub-sections to help automate and use canned vocabulary.
  
  ### Finding Details
- 
+ Contains the common data types that may be needed to include in reporting metadata and allow for toolset integration.
+ * Title - The title of the finding
+ * VSR - Vulnerability Severity Rating - Custom developed default rating to place a finding
+ * CVSS - Applied score that depicts a translation from VSR to CVSS
+ * Risk - The commonly applied label of the finding 
+ * Service - Descriptor of how a finding denoted identification 
+ * NIST 800-53 - Specific correlating controls to finding
+ * References - Curated list of sources that should be used during reporting
+
  ### Technical Information 
  
  ### Finding Metadata
