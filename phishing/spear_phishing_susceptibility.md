@@ -12,8 +12,7 @@
   * Internal Penetration Testing
   * External Penetration Testing 
 ## NIST 800-53 
-  * SC-7
-  * SI-3
+  * AT-2
 ## Refrences
   * https://www.us-cert.gov/report-phishing
   * https://www1.informatik.uni-erlangen.de/filepool//publications/zina/2017-benenson-unpacking-spear-phishing.pdf
