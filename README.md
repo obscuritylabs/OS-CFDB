@@ -3,6 +3,8 @@ This project aims to provide a single source of common findings seen on Web Appl
 
 > *Please understand that this is **Open Source** project that is driven by **community** feedback. If you do not contribute, who will? Please take the time to correct, update, or even make a pull request when you are feeling up to the task.*
 
+## *Why?*
+
 ## How to Interpret the Data
 The data within this project is broken out into multiple headers and lists; this allows for easy data serialization to JSON or other future formats as long as an MD parser exists.  You will find **three** major sections:
  * Finding Details 
