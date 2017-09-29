@@ -28,7 +28,7 @@ The assessment team was able to spear phish successfully the in-scope organizati
 When a phishing email can subvert NSM and AESP (Advanced Endpoint Security Protection), an attacker can gain code execution on the target. Execution could lead to full system compromise and post-exploitation activities.
 
 ## Recommendation(s)
-Regularly analyze border and host-level protections, including spam-filtering capabilities, to ensure their continued effectiveness in blocking the delivery and execution of malware. Build custom IOC's (Indicators Of Compromise) to mitigate APT (Advanced Persistent Threats) and known techniques. 
+Regularly analyze border and host-level protections, including spam-filtering capabilities, to ensure their continued effectiveness in blocking the delivery and execution of malware. Build custom IOC's (Indicators of Compromise) to mitigate APT (Advanced Persistent Threats) and known techniques. 
 
 # Finding Metadata
   * Author(s)
