@@ -2,7 +2,7 @@
 # Finding Details 
 
 ## Title
-  Network Segmentation 
+  Inadequate Network Segmentation 
 ## SVR
   4
 ## CVSS
