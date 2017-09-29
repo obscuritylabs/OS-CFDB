@@ -8,6 +8,8 @@ The data within this project is broken out into multiple headers and lists; this
  * Finding Details 
  * Technical Information 
  * Finding Metadata 
+ 
+ Each major section contains multiple sub-sections to help automate and use canned vocabulary.
 
 ### How the Data is Supplied
  * JSON - Will allow for serializable data structures or integration into many other solutions.
