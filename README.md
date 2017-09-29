@@ -13,7 +13,7 @@ The data within this project is broken out into multiple headers and lists; this
  * JSON - Will allow for serializable data structures or integration into many other solutions.
  * MD - MarkDown is a way to display structured text and allow readers to view the findings easily.
 
-|  Vulnerability Severity Rating |  Vulnerability Severity Rating |  Vulnerability Severity Rating |
+|  Vulnerability Severity Rating |  Common Vulnerability Scoring System (CVSS) Score |  Vulnerability Severity Evaluation Criteria|
 |:-:|:-:|---|
 |  Level 5 | 8.0 – 10.0  | The vulnerability may allow: an attacker to assume remote administrator or root privileges; exposure (full read and write access) of a host, application or backend database; an attacker to issue remote commands or execute arbitrary code.  |
 |  Level 4 | 6.0 – 7.9  | The vulnerability may allow: an attacker to assume only user privileges, or perform a complete denial of service attack; partial exposure (read access only) of, for example, the host file system or a listing of all host or application users.  |
