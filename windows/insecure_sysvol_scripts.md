@@ -26,7 +26,7 @@ The SYSVOL folder on DC's (Domain Controllers) is a domain-wide network share in
 If an attacker can gain access to the domain environment, they effectively can use these gathered credentials to attempt privilege escalation. These "User" credentials could result in further lateral movement or the ability to gain unauthorized access to different regions within the domain.
 
 ## Recommendation(s)
-The assessment team recommends that scripts used for administration, password changes, authenticated share mounting be removed. Automated password changes and authenticated share mounting should be accomplished with proper AD group delegation. 
+The assessment team recommends that scripts used for administration, password changes, authenticated share mounting be removed. Automated password changes and authenticated share mounting should be accomplished with proper AD group delegation. A thorough audit should be conducted domain wide to identify other scripts exposing sensitive data or credentials.  
 
 # Finding Metadata
   * Author(s)
