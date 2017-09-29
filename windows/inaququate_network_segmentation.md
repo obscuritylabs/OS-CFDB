@@ -13,8 +13,8 @@
   * Internal Penetration Testing
   * External Penetration Testing 
 ## NIST 800-53 
-   * SC-32
-   * SC-7
+  * SC-32
+  * SC-7
 ## Refrences
   * 
   
