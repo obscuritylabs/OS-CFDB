@@ -20,7 +20,7 @@ This project aims to provide a single source of common findings seen on Web Appl
 # Current Finding Tree
 
 ## Windows 
-[Insecure File Shares](windows/insecure_file_shares.md)
+  * [Insecure File Shares](windows/insecure_file_shares.md)
 
 # License Data
 
