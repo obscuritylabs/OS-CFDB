@@ -4,7 +4,7 @@ This project aims to provide a single source of common findings seen on **Web/Ap
 > *Please understand that this is **Open Source** project that is driven by **community** feedback. If you do not contribute, who will? Please take the time to correct, update, or even make a pull request when you are feeling up to the task.*
 
 ## Why?
-
+Too often in prior experience was repetitive, inaccurate and time loss incurred during the reporting phase of the assessment. These constraints were due to lack of a centralized repository for findings, a single source of truth. However, this can raise a greater question of how we can integrate into automation.
 
 ## How to Interpret the Data
 The data within this project is broken out into multiple headers and lists; this allows for easy data serialization to JSON or other future formats as long as an MD parser exists.  You will find **three** major sections:
