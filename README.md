@@ -1,3 +1,4 @@
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 # OS-CFDB: Open Source - Common Findings Data Base
 This project aims to provide a single source of common findings seen on Web Application, Network, and Red Team assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
 
