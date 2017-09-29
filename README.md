@@ -17,7 +17,7 @@ The data within this project is broken out into multiple headers and lists; this
  
  ### Finding Metadata
 
-### How the Data is Supplied
+## How the Data is Supplied
  * JSON - Will allow for serializable data structures or integration into many other solutions.
  * MD - MarkDown is a way to display structured text and allow readers to view the findings easily.
 
