@@ -1,16 +1,3 @@
-- [OS-CFDB: Open Source - Common Findings Data Base](#os-cfdb--open-source---common-findings-data-base)
-  * [Why?](#why-)
-  * [How to Interpret the Data](#how-to-interpret-the-data)
-    + [Finding Details](#finding-details)
-    + [Technical Information](#technical-information)
-    + [Finding Metadata](#finding-metadata)
-  * [How the Data is Supplied](#how-the-data-is-supplied)
-- [Current Finding Tree](#current-finding-tree)
-  * [Windows](#windows)
-- [License Data](#license-data)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # OS-CFDB: Open Source - Common Findings Data Base
 This project aims to provide a single source of common findings seen on **Web/Application**, **Network**, and **Red Team** assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
 
