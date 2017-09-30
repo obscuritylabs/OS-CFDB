@@ -1,4 +1,4 @@
-:-:|# Finding Details 
+# Finding Details 
 
 ### Finding Matrix
 | Title  | SVR  |  CVSS  | Risk |
