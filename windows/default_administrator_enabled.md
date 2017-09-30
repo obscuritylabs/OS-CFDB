@@ -17,7 +17,7 @@
 | CM-2  |
 | CM-6  |
 | IA-2 |
-| IA=3 |
+| IA-3 |
 
 ### Finding MITRE ATT&CK Corelation
 | Tactic | ID |
