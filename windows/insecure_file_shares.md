@@ -1,24 +1,35 @@
 # Finding Details 
 
-## Title
-  Insecure File Shares
-## SVR
-  3
-## CVSS
-  4.0-5.9
-## Risk
-  Medium
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * SI-2, 
-  * AC-1
-  * AC-3
-  * AC-6
- ## References
-  * https://technet.microsoft.com/en-us/library/cc754178(v=ws.11).aspx
-  * https://technet.microsoft.com/en-us/library/cc772184(v=ws.11).aspx
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+|  Insecure File Shares | 3  | 4.0-5.9  | Medium  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| SI-2 |
+| AC-1 |
+| AC-3 |
+| AC-6 |
+
+### Finding MITRE ATT&CK Corelation
+| Tactic | ID |
+|:-:|:-:|
+| Network Share Discovery | T1135 |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://technet.microsoft.com/en-us/library/cc754178(v=ws.11).aspx |
+| https://technet.microsoft.com/en-us/library/cc772184(v=ws.11).aspx|
+ 
   
 # Technical Information
 
