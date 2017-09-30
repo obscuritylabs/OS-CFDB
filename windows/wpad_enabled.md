@@ -23,7 +23,7 @@
 ### Finding MITRE ATT&CK Corelation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
-|  |  | | |
+|  Exploitation of Vulnerability | Credential Access, Defense Evasion, Lateral Movement, Privilege Escalation |	T1068 | https://attack.mitre.org/wiki/Technique/T1068 |
 
 ### Finding Refrences
 | URL |
