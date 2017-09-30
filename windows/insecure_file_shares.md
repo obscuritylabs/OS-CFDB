@@ -32,10 +32,12 @@ This insecure storage misconfiguration leaves data open to theft by an attacker 
 The assessment team recommends following the model of least privileged. Implement a secure configuration by using NTFS Share Permissions and restricting Domain Users and Groups to sensitive data.
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
