@@ -20,9 +20,9 @@
 | IA-3 |
 
 ### Finding MITRE ATT&CK Corelation
-| Tactic | ID |
-|:-:|:-:|
-| Pass the Hash | T1075 |
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
+| Pass the Hash | Lateral Movement | T1075 | https://attack.mitre.org/wiki/Technique/T1075 |
 
 ### Finding Refrences
 | URL |
