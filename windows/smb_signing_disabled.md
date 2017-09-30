@@ -1,28 +1,38 @@
-
-
 # Finding Details 
 
-## Title
-  SMB Signing Disabled
-## SVR
-  4
-## CVSS
-  6.0 – 7.9
-## Risk
-  High
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * CM-2
-  * CM-6
-  * IA-2
-  * IA-3
-## Refrences
-  * https://pen-testing.sans.org/blog/2013/04/25/smb-relay-demystified-and-ntlmv2-pwnage-with-python
-  * https://support.microsoft.com/en-us/help/161372/how-to-enable-smb-signing-in-windows-nt
-  * https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/
-  * https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749(v=vs.85).aspx
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+|  SMB Signing Disabled | 4  | 6.0 – 7.9  | High  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| CM-2 |
+| CM-6 | 
+| IA-2 |
+| IA-3 |
+
+
+### Finding MITRE ATT&CK Corelation
+| Tactic | ID |
+|:-:|:-:|
+|  |  |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://pen-testing.sans.org/blog/2013/04/25/smb-relay-demystified-and-ntlmv2-pwnage-with-python |
+| https://support.microsoft.com/en-us/help/161372/how-to-enable-smb-signing-in-windows-nt |
+| https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/ |
+| https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749(v=vs.85).aspx |
+ 
  
 # Technical Information
 
