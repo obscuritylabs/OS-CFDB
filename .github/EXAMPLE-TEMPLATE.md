@@ -39,10 +39,12 @@ If an attacker can gain access to the domain environment, they effectively can u
 The assessment team recommends that scripts used for administration, password changes, authenticated share mounting be removed. Automated password changes and authenticated share mounting should be accomplished with proper AD group delegation. A thorough audit should be conducted domain wide to identify other scripts exposing sensitive data or credentials.  
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+| Http://google.com |
