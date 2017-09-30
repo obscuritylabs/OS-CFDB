@@ -35,10 +35,12 @@ If an attacker can gain elevated system privileges on a compromised host, the at
 The assessment team recommends disabling the built-in Administrator if business requirements allow for it. This account should only be used during initial setup and disaster recovery if possible. If disabling the account is not an option, its recommend to use a solution such as LAPS (Local Administrator Password Solution) or enroll in third-party solutions to randomize and manage bulk password management.
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
