@@ -32,10 +32,12 @@ This ability to move traffic from a low security to a high-security boundary may
 Configure internal firewalls and network infrastructure to isolate traffic to areas of the network as necessary.  Network segmentation should take into account where more sensitive administrative or operational information resides, and bias toward protection of that data. If this is not possible an audit should be conducted and a risk assessment to determine a functions balance of security and operations. 
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017k 
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
