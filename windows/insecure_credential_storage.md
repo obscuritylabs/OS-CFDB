@@ -14,7 +14,7 @@
   * Internal Penetration Testing
   * External Penetration Testing 
 ## NIST 800-53 
-    * SI-13
+  * SI-13
     
 ## Refrences
   * https://www.sans.org/reading-room/whitepapers/authentication/clear-text-password-risk-assessment-documentation-113
