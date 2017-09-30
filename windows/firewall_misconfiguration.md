@@ -32,10 +32,12 @@ If a rule is exposed or discovered by an attacker, they may have the ability to 
 To effectively mitigate against the risk of device misconfiguration an organization needs to implement proper change management processes. This process should allow stakeholders to understand the risk of the configuration. If business requirements require acceptance of a risk, an audit should be conducted to ensure all rules are still applicable. 
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017k 
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
