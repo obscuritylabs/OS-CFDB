@@ -1,23 +1,33 @@
-
 # Finding Details 
 
-## Title
-  Weak Password Policy 
-## SVR
-  3
-## CVSS
-  4.0-5.9
-## Risk
-  Medium
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * IA-2
-  * IA-7
-## Refrences
-  * https://technet.microsoft.com/en-us/library/cc731699(v=ws.11).aspx
-  * https://technet.microsoft.com/en-us/library/cc786468(v=ws.10).aspx
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+| Weak Password Policy   | 3  | 4.0-5.9  | Medium  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| IA-2 |
+| IA-7 |
+
+
+### Finding MITRE ATT&CK Corelation
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
+| Brute Force | Credential Access  | T1110 | https://attack.mitre.org/wiki/Technique/T1110 |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://technet.microsoft.com/en-us/library/cc731699(v=ws.11).aspx |
+| https://technet.microsoft.com/en-us/library/cc786468(v=ws.10).aspx |
  
 # Technical Information
 
