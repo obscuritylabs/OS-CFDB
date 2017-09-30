@@ -28,8 +28,8 @@ The data within this project is broken out into multiple headers and lists; this
  ### Technical Information 
  
  * Description - The technical overview of a finding, this is not meant to be all-inclusive.
- * Impact - 
- * Recommendation(s) -
+ * Impact - A section of a how the result will affect an organization.
+ * Recommendation(s) - Current plan of action to impment.
  
  ### Finding Metadata
  * Author(s) - List of people that worked on a finding.
