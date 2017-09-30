@@ -1,3 +1,4 @@
+
 # OS-CFDB: Open Source - Common Findings Data Base
 This project aims to provide a single source of common findings seen on **Web/Application**, **Network**, and **Red Team** assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
 
@@ -31,6 +32,14 @@ The data within this project is broken out into multiple headers and lists; this
  * Recommendation(s) -
  
  ### Finding Metadata
+ * Author(s) 
+  * [..]
+ * Source(s) 
+  * []
+ * Created 
+   * Time Date
+ * Updated 
+  * Time Date
 
 ## How the Data is Supplied
  * JSON - Will allow for serializable data structures or integration into many other solutions.
