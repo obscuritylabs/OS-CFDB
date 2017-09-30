@@ -38,7 +38,7 @@ The assessment team recommends removing SPNs and migrating to Managed Service Ac
 | Author Name | Twitter Handle | Email | Created | Updated |
 |:-:|:-:|:-:|:-:|:-:|
 | Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
-| Rob Fuller | Rob Fuller |  | 09/27/2017 | 09/27/2017 |
+| Rob Fuller | @Mubix |  | 09/27/2017 | 09/27/2017 |
 
 ### Finding Sources
 | URL | 
