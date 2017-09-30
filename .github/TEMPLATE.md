@@ -1,4 +1,4 @@
-# Finding Details 
+:-:|# Finding Details 
 
 ### Finding Matrix
 | Title  | SVR  |  CVSS  | Risk |
@@ -38,7 +38,7 @@
 # Finding Metadata
 ### Finding Development
 | Author Name | Twitter Handle | Email | Created | Updated |
-|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|
 | Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
 
 ### Finding Sources
