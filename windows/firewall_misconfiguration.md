@@ -20,7 +20,7 @@
 ### Finding MITRE ATT&CK Corelation
 | Tactic | ID |
 |:-:|:-:|
-| Credential Access | T1081 |
+| Exfiltration Over Command and Control Channel | T1041 |
 
 ### Finding Refrences
 | URL |
