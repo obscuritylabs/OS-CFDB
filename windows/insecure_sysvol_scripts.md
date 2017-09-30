@@ -1,21 +1,33 @@
 # Finding Details 
 
-## Title
-  Insecure SYSVOL Scripts
-## SVR
-  3
-## CVSS
-  4.0-5.9
-## Risk
-  Medium
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * IA-2
-  * IA-7
-## Refrences
-  * https://adsecurity.org/?p=2288
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+|   Insecure SYSVOL Scripts | 3  | 4.0-5.9  |  Medium |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| IA-2 |
+| IA-7 |
+
+
+### Finding MITRE ATT&CK Corelation
+| Tactic | ID |
+|:-:|:-:|
+| Credential Access | T1081 |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://adsecurity.org/?p=2288 |
+ 
  
 # Technical Information
 
