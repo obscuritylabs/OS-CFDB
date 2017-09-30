@@ -33,10 +33,12 @@ If an attacker can gain elevated system privileges on a compromised host, the at
 The assessment team recommends that MsCacheV2 credential caching is limited to three accounts at any given time. This setting can be adjusted via GPO (Group Policy Objects).
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
