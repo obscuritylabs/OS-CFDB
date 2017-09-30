@@ -1,23 +1,33 @@
-
 # Finding Details 
 
-## Title
-  Inadequate Network Segmentation 
-## SVR
-  4
-## CVSS
-  6.0 – 7.9
-## Risk
-  High
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * SC-32
-  * SC-7
-## Refrences
-  * https://www.cisco.com/c/en/us/about/security-center/framework-segmentation.html
-  * https://www.sans.org/reading-room/whitepapers/bestprac/infrastructure-security-architecture-effective-security-monitoring-36512
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+| Inadequate Network Segmentation   | 4  | 6.0 – 7.9  |  High  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| SC-32 |
+| SC-7  |
+
+
+### Finding MITRE ATT&CK Corelation
+| Tactic | ID |
+|:-:|:-:|
+| Exfiltration Over Command and Control Channel | T1041 |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://www.cisco.com/c/en/us/about/security-center/framework-segmentation.html |
+| https://www.sans.org/reading-room/whitepapers/bestprac/infrastructure-security-architecture-effective-security-monitoring-36512 |
   
 # Technical Information
 
