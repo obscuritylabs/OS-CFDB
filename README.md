@@ -5,7 +5,7 @@ This project aims to provide a single source of common findings seen on **Web/Ap
 > *Please understand that this is **Open Source** project that is driven by **community** feedback. If you do not contribute, who will? Please take the time to correct, update, or even make a pull request when you are feeling up to the task.*
 
 ## Why?
-Too often in prior experience was repetitive, inaccurate and time loss incurred during the reporting phase of the assessment. These constraints were due to lack of a centralized repository for findings, a single source of truth. However, this can raise a greater question of how we can integrate into automation. Moving forward this project hopes to help small, overtasked, and startups produce valuable data for clients and their organizations they support.
+Too often in prior experience reporting was repetitive, inaccurate and time loss incurred during the phase of the assessment. These constraints were due to lack of a centralized repository for findings, a single source of truth. However, this can raise a greater question of how we can integrate into automation. Moving forward this project hopes to help small, overtasked, and startups produce valuable data for clients and their organizations they support.
 
 ## How to Interpret the Data
 The data within this project is broken out into multiple headers and lists; this allows for easy data serialization to JSON or other future formats as long as an MD parser exists.  You will find **three** major sections:
@@ -27,30 +27,30 @@ The data within this project is broken out into multiple headers and lists; this
 
  ### Technical Information 
  
- * Description - 
+ * Description - The technical overview of a finding, this is not meant to be all-inclusive.
  * Impact - 
  * Recommendation(s) -
  
  ### Finding Metadata
- * Author(s) 
+ * Author(s) - List of people that worked on a finding.
    * [..]
- * Source(s) 
+ * Source(s) - Sources the author used for research of a finding.
    * [..]
- * Created 
+ * Created - Time and date of creation.
    * Time Date
- * Updated 
+ * Updated - time and date of an update to a finding.
    * Time Date
 
 ## How the Data is Supplied
  * JSON - Will allow for serializable data structures or integration into many other solutions.
- * MD - MarkDown is a way to display structured text and allow readers to view the findings easily.
+ * MD - MarkDown is a way to display structured text and allow readers to view the findings quickly.
 
 |  Vulnerability Severity Rating |  Common Vulnerability Scoring System (CVSS) |  Vulnerability Severity Evaluation Criteria|
 |:-:|:-:|---|
 |  Level 5 | 8.0 – 10.0  | The vulnerability may allow: an attacker to assume remote administrator or root privileges; exposure (full read and write access) of a host, application or backend database; an attacker to issue remote commands or execute arbitrary code.  |
 |  Level 4 | 6.0 – 7.9  | The vulnerability may allow: an attacker to assume only user privileges, or perform a complete denial of service attack; partial exposure (read access only) of, for example, the host file system or a listing of all host or application users.  |
 |  Level 3 | 4.0 – 5.9  | The vulnerability may allow: An attacker to abuse or misuse a host or application, or perform a partial denial of service attack. Partial exposure (read access only) to sensitive host or network security configuration details or source code that allows an attacker to research additional attack(s).  |
-|  Level 2 |  2.0 – 3.9 | The vulnerability may allow: information leakage, such as software distribution or version information that may be used by an attacker to research potential attacks against a host or application.  |
+|  Level 2 |  2.0 – 3.9 | The vulnerability may allow: information leakages, such as software distribution or version information that may be used by an attacker to research potential attacks against a host or application.  |
 |  Level 1 |  0.0 -1.9 |  The vulnerability may allow: exposure of general information about a host or application. |
 
 # Current Finding Tree
@@ -73,7 +73,7 @@ modification, are permitted provided that the following conditions are met:
 
 * Redistributions in binary form must reproduce the above copyright notice,
   this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+  And other materials provided with the distribution.
 
 * Neither the name of the copyright holder nor the names of its
   contributors may be used to endorse or promote products derived from
