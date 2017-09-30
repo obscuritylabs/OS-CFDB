@@ -1,26 +1,36 @@
-
 # Finding Details 
 
-## Title
-  WPAD Enabled 
-## SVR
-  4
-## CVSS
-  6.0 – 7.9
-## Risk
-  High
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * CM-2
-  * CM-6
-  * IA-2
-  * IA-3
-## Refrences
-  * https://www.trustedsec.com/2013/07/wpad-man-in-the-middle-clear-text-passwords/
-  * https://technet.microsoft.com/en-us/library/security/ms16-077.aspx
- 
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+|  WPAD Enabled  |  4 |  6.0 – 7.9  | High  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+| CM-2 |
+| CM-6 |
+| IA-2 |
+| IA-3 |
+
+
+### Finding MITRE ATT&CK Corelation
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
+|  |  | | |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://www.trustedsec.com/2013/07/wpad-man-in-the-middle-clear-text-passwords/ |
+| https://technet.microsoft.com/en-us/library/security/ms16-077.aspx |
+  
 # Technical Information
 
 ## Description 
