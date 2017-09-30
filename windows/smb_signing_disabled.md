@@ -39,10 +39,12 @@ If an attacker gains access to the LAN (Local Area Network), it enables the abil
 The assessment team recommends that SMB signing enabled via GPO policy or registry for the In-Scope network hosts. If this is not possible due to business constraints, core servers and resources should allow SMB signing to prevent GPO tampering or credential compromise of high-value accounts.  
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
