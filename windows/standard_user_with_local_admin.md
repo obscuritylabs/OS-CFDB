@@ -31,10 +31,12 @@ Over delegation of Local Admin rights to a “Standard” user account can resul
 The assessment team recommends that the least privileged model is followed when assessing if users should have the local “Administrator” group permission. In many cases, this privilege could be granted on a case-by-case basis for certain administrative functions. One method of employing this is using credential checkout systems or assigning the user a secondary account for administrator functions. These remediations reduce the overall attack surface of running at elevated privilege levels for day-to-day tasks.
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
