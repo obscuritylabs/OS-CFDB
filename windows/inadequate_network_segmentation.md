@@ -19,9 +19,9 @@
 
 
 ### Finding MITRE ATT&CK Corelation
-| Tactic | ID |
-|:-:|:-:|
-| Exfiltration Over Command and Control Channel | T1041 |
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
+| Exfiltration Over Command and Control Channel | Exfiltration |  T1041 | https://attack.mitre.org/wiki/Technique/T1041 |
 
 ### Finding Refrences
 | URL |
