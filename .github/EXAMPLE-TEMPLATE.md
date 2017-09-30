@@ -24,7 +24,7 @@
 
 ## Finding Refrences
 | URL |
-|:-:|:-:|
+|:-:|
 | https://adsecurity.org/?p=2288 |
  
 # Technical Information
