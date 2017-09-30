@@ -22,7 +22,7 @@
 ### Finding MITRE ATT&CK Corelation
 | Tactic | ID |
 |:-:|:-:|
-| Network Share Discovery | T1135 |
+| Network Share Discovery | Discovery | T1135 | https://attack.mitre.org/wiki/Technique/T1135 |
 
 ### Finding Refrences
 | URL |
