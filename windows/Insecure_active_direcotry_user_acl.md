@@ -31,10 +31,12 @@ If an attacker gains access to any user within the domain, they can start to req
 The assessment team recommends removing the "GenericAll/GenericWrite" attribute for the affected systems. An audit of critical and high privileged accounts should be conducted to ensure they are following the least privileged model.
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+| Http://google.com |
