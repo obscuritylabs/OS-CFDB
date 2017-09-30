@@ -20,8 +20,8 @@
 | AC-6 |
 
 ### Finding MITRE ATT&CK Corelation
-| Tactic | ID |
-|:-:|:-:|
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
 | Network Share Discovery | Discovery | T1135 | https://attack.mitre.org/wiki/Technique/T1135 |
 
 ### Finding Refrences
