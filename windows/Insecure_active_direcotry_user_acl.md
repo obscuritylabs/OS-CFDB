@@ -39,4 +39,4 @@ The assessment team recommends removing the "GenericAll/GenericWrite" attribute 
 ### Finding Sources
 | URL | 
 |:-:|
-| Http://google.com |
+|  |
