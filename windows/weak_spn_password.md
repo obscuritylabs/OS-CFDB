@@ -32,13 +32,15 @@ If an attacker gains access to any user within the domain, they can start to req
 ## Recommendation(s)
 The assessment team recommends removing SPNs and migrating to Managed Service Accounts (MSAs). MAS is designed to provide services and tasks such as Windows services to share their domain accounts while eliminating the need for an administrator to administer passwords for these accounts manually. It is a managed domain account that provides automatic password management. If business requirements do not allow for MSA migration, guarantee all service accounts use the proper password complexity. Changing passwords of affected accounts to applicable industry best practices and company-defined requirements. 
 
+
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-    * Rob Fuller (@Mubix)
-  * Source(s)
-    * https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+| Rob Fuller (@Mubix) | Rob Fuller (@Mubix) |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+| https://github.com/mubix/cfdb/blob/master/Windows/Weak_SPN_Password.md |
