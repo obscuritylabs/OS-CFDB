@@ -21,7 +21,7 @@
 ### Finding MITRE ATT&CK Corelation
 | Tactic | ID |
 |:-:|:-:|
-| Credential Access | T1081 |
+| Credentials in Files | Credential Access | T1081 | https://attack.mitre.org/wiki/Technique/T1081 |
 
 ### Finding Refrences
 | URL |
