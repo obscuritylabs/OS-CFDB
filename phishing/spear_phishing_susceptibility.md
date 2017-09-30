@@ -37,4 +37,4 @@ Reduce user spear phishing susceptibility through increased spear phishing aware
 ### Finding Sources
 | URL | 
 |:-:|
-| Http://google.com |
+|  |
