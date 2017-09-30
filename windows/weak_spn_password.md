@@ -1,26 +1,38 @@
 
 # Finding Details 
 
-## Title
-  Weak SPN Password 
-## SVR
-  5
-## CVSS
-  8.0 – 10.0
-## Risk
-  Critical
-## Service
-  * Internal Penetration Testing
-  * External Penetration Testing 
-## NIST 800-53 
-  * 
-## Refrences
-  * https://adsecurity.org/?p=2011
-  * https://msdn.microsoft.com/en-us/library/ms677949(v=vs.85).aspx
-  * https://msdn.microsoft.com/en-us/library/windows/desktop/ms684272(v=vs.85).aspx
-  * https://blog.netspi.com/faster-domain-escalation-using-ldap/
-  * https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts
+### Finding Matrix
+| Title  | SVR  |  CVSS  | Risk |
+|:-:|:-:|:-:|:-:|
+|  Weak SPN Password  | 5  | 8.0 – 10.0  | Critical  |
+
+### Finding Service
+| Service  |
+|:-:|
+| Internal Penetration Testing  |
+| External Penetration Testing  |
+
+### Finding NIST 800-53 Controls
+| NIST  |
+|:-:|
+|  |
+
+
+### Finding MITRE ATT&CK Corelation
+| Name | Tactic | ID | Link |
+|:-:|:-:|:-:|:-:|
+|  |  | | |
+
+### Finding Refrences
+| URL |
+|:-:|
+| https://adsecurity.org/?p=2011 |
+| https://msdn.microsoft.com/en-us/library/ms677949(v=vs.85).aspx |
+| https://msdn.microsoft.com/en-us/library/windows/desktop/ms684272(v=vs.85).aspx |
+| https://blog.netspi.com/faster-domain-escalation-using-ldap/ |
+| https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts |
  
+  
 # Technical Information
 
 ## Description 
