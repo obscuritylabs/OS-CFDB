@@ -34,11 +34,12 @@ Leaving WPAD enabled could allow an attacker using host or network-based toolset
 The assessment team recommends following security best practices, by completely disabling WPAD. Windows has, however, a per-user and per-system proxy settings. Remediated with login scripts, GPO settings and registry edits can significantly increase the security of the network.
 
 # Finding Metadata
-  * Author(s)
-    * Alexander Rymdeko-Harvey (@Killswitch-GUI)
-  * Source(s)
-    * https://github.com/mubix/cfdb/blob/master/Windows/WPAD.md
-  * Created
-    * 09/27/2017
-  * Updated
-    * 09/27/2017
+### Finding Development
+| Author Name | Twitter Handle | Email | Created | Updated |
+|:-:|:-:|:-:|:-:|:-:|
+| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+
+### Finding Sources
+| URL | 
+|:-:|
+|  |
