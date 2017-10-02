@@ -29,6 +29,7 @@ The data within this project is broken out into multiple headers and lists; this
 - Service - Descriptor of how a finding denoted identification 
 - NIST 800-53 - Specific correlating controls to finding
 - MITRE ATT&CK - Linked tactics that may relate to the finding for further risk analysis
+
 - References - Curated list of sources that should be used during reporting
 
 ### Technical Information
@@ -49,7 +50,59 @@ The data within this project is broken out into multiple headers and lists; this
 - JSON - Will allow for serializable data structures or integration into many other solutions.
 - MD - MarkDown is a way to display structured text and allow readers to view the findings quickly.
 
+### JSON
 
+```
+{
+  "finding": {
+    "Finding Details ": {
+      "Finding Matrix": [
+        {
+          "Title": "Insecure SYSVOL Scripts",
+          "SVR": 3,
+          "CVSS": "4.0-5.9",
+          "Risk": "Medium"
+        }
+      ],
+      "Finding Service": [
+        {
+          "Service": "Internal Penetration Testing "
+        },
+        {
+          "Serivce": "External Penetration Testing"
+        }
+      ],
+      "Finding NIST 800-53 Controls" : [
+        {
+          "NIST": "IA-2"
+        },
+        {
+          "NIST": "IA-7"
+        }
+      ],
+      "Finding MITRE ATT&CK Corelation" : [
+        {
+          "Name": "Credentials in Files",
+          "Tactic": "Credential Access",
+          "ID": "T1081",
+          "Link": "https://attack.mitre.org/wiki/Technique/T1081"
+        }  
+      gh audit should be conducted domain wide to identify other scripts exposing sensitive data or credentials."
+    },
+    "Finding Metadata": {
+      "Finding Development": [
+        {
+          "Author Name": "Alexander Rymdeko-Harvey",
+          "Twitter Handle": "@Killswitch-GUI",
+          "Email": "test@gmail.com",
+          "Created": "09/27/2017",
+          "Updated": "09/27/2017"
+        }
+      ]
+    }
+  }
+}
+```
 
 ## Finding Classification and Scoring
 
