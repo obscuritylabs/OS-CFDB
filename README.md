@@ -84,6 +84,39 @@ Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a c
 
 # Current Finding Tree
 
+* [LICENSE](./LICENSE)
+ * [README.md](./README.md)
+ * [android](./android)
+   * [logging.md](./android/logging.md)
+ * [ios](./ios)
+   * [logging.md](./ios/logging.md)
+ * [linux](./linux)
+   * [outdated_kernal.md](./linux/outdated_kernal.md)
+ * [macos](./macos)
+   * [outdated_operating_system.md](./macos/outdated_operating_system.md)
+ * [phishing](./phishing)
+   * [spear_phishing_susceptibility.md](./phishing/spear_phishing_susceptibility.md)
+   * [spear_phishing_weaknessess.md](./phishing/spear_phishing_weaknessess.md)
+ * [web](./web)
+   * [blind_sql_injection.md](./web/blind_sql_injection.md)
+   * [refelctive_xss.md](./web/refelctive_xss.md)
+   * [stored_xss.md](./web/stored_xss.md)
+ * [windows](./windows)
+   * [Insecure_active_direcotry_user_acl.md](./windows/Insecure_active_direcotry_user_acl.md)
+   * [default_administrator_enabled.md](./windows/default_administrator_enabled.md)
+   * [ease_account_leakage.md](./windows/ease_account_leakage.md)
+   * [firewall_misconfiguration.md](./windows/firewall_misconfiguration.md)
+   * [inadequate_network_segmentation.md](./windows/inadequate_network_segmentation.md)
+   * [insecure_credential_storage.md](./windows/insecure_credential_storage.md)
+   * [insecure_file_shares.md](./windows/insecure_file_shares.md)
+   * [insecure_sysvol_scripts.md](./windows/insecure_sysvol_scripts.md)
+   * [mscachev2_misconfiguration.md](./windows/mscachev2_misconfiguration.md)
+   * [smb_signing_disabled.md](./windows/smb_signing_disabled.md)
+   * [standard_user_with_local_admin.md](./windows/standard_user_with_local_admin.md)
+   * [weak_password_policy.md](./windows/weak_password_policy.md)
+   * [weak_spn_password.md](./windows/weak_spn_password.md)
+   * [wpad_enabled.md](./windows/wpad_enabled.md)
+
 
 # License Data
 
