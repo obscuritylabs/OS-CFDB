@@ -2,7 +2,7 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | SVR  |  CVSS  | Risk |
+| Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
 |  Weak SPN Password  | 5  | 8.0 – 10.0  | Critical  |
 
