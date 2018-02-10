@@ -1,7 +1,7 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | SVR  |  CVSS  | Risk |
+| Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
 |  Insecure File Shares | 3  | 4.0-5.9  | Medium  |
 
