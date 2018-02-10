@@ -60,8 +60,8 @@ Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a c
 |            Level 5            |                8.0 – 10.0                | Finding may allow an attacker to gain remote execution as a privileged or unprivileged user that exposes sensitive data, or allows read/write of a remote system. This may allow an attacker to execute code, change or read sensitive data and break all confidentiality, integrity or accountability of the affected system. |
 |            Level 4            |                6.0 – 7.9                 | The finding may allow an attacker to gain read-only, denial or resources or under certain conditions, the exploitability allows user-mode code execution.  |
 |            Level 3            |                4.0 – 5.9                 | The finding may allow an attacker to manipulate or abuse application functionality, denial of service or partial read-only access to application data in a constrained environment.  |
-|            Level 2            |                2.0 – 3.9                 | The vulnerability may allow: information leakages, such as software distribution or version information that may be used by an attacker to research potential attacks against a host or application. |
-|            Level 1            |                 0.0 -1.9                 | The vulnerability may allow: exposure of general information about a host or application. |
+|            Level 2            |                2.0 – 3.9                 | The finding may allow an attacker to obtain sensitive information about a system, internal network, or other identifying data that could lead to further compromise.  |
+|            Level 1            |                 0.0 -1.9                 | The finding may allow an attacker to gather vague system information. This often occurs to do best practices not being properly implemented. |
 
 # Current Finding Tree
 
