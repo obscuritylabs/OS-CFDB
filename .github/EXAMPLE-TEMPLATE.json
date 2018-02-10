@@ -4,7 +4,7 @@
       "Finding Matrix": [
         {
           "Title": "Insecure SYSVOL Scripts",
-          "SVR": 3,
+          "VSR": 3,
           "CVSS": "4.0-5.9",
           "Risk": "Medium"
         }
