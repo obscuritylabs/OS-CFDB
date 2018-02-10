@@ -48,6 +48,7 @@ The data within this project is broken out into multiple headers and lists; this
 ## How the Data is Supplied
 
 - JSON - Will allow for serializable data structures or integration into many other solutions.
+ - **CURRENTLY UNDER DEVLOPMENT** 
 - MD - MarkDown is a way to display structured text and allow readers to view the findings quickly.
 
 
