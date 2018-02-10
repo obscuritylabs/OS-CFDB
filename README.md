@@ -17,7 +17,6 @@ This project aims to provide a single source of common findings seen on **Web/Ap
   - [How the Data is Supplied](#how-the-data-is-supplied)
   - [Finding Classification and Scoring](#finding-classification-and-scoring)
 - [Current Finding Tree](#current-finding-tree)
-  - [Windows](#windows)
 - [License Data](#license-data)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
