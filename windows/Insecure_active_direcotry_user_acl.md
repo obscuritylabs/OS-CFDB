@@ -1,7 +1,7 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | SVR  |  CVSS  | Risk |
+| Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
 | Insecure Active Direcotry User ACLs    |  5 |  8.0 – 10.0 | Critical  |
 
