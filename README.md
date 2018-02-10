@@ -83,10 +83,39 @@ Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a c
 |            Level 1            |                 0.0 -1.9                 | The finding may allow an attacker to gather vague system information. This often occurs to do best practices not being properly implemented. |
 
 # Current Finding Tree
-
-## Windows
-
-- [Insecure File Shares](windows/insecure_file_shares.md)
+.
+|-- ./LICENSE
+|-- ./android
+|   `-- ./android/logging.md
+|-- ./ios
+|   `-- ./ios/logging.md
+|-- ./linux
+|   `-- ./linux/outdated_kernal.md
+|-- ./macos
+|   `-- ./macos/outdated_operating_system.md
+|-- ./phishing
+|   |-- ./phishing/spear_phishing_susceptibility.md
+|   `-- ./phishing/spear_phishing_weaknessess.md
+|-- ./web
+|   |-- ./web/blind_sql_injection.md
+|   |-- ./web/refelctive_xss.md
+|   `-- ./web/stored_xss.md
+|-- ./windows
+|   |-- ./windows/ease_account_leakage.md
+|   |-- ./windows/Insecure_active_direcotry_user_acl.md
+|   |-- ./windows/default_administrator_enabled.md
+|   |-- ./windows/firewall_misconfiguration.md
+|   |-- ./windows/inadequate_network_segmentation.md
+|   |-- ./windows/insecure_credential_storage.md
+|   |-- ./windows/insecure_file_shares.md
+|   |-- ./windows/insecure_sysvol_scripts.md
+|   |-- ./windows/mscachev2_misconfiguration.md
+|   |-- ./windows/smb_signing_disabled.md
+|   |-- ./windows/standard_user_with_local_admin.md
+|   |-- ./windows/weak_password_policy.md
+|   |-- ./windows/weak_spn_password.md
+|   `-- ./windows/wpad_enabled.md
+|-- ./README.md
 
 # License Data
 
