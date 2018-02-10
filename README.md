@@ -1,3 +1,9 @@
+# OS-CFDB: Open Source - Common Findings Data Base
+
+This project aims to provide a single source of common findings seen on **Web/Application**, **Network**, and **Red Team** assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
+
+> *Please understand that this is **Open Source** project that is driven by **community** feedback. If you do not contribute, who will? Please take the time to correct, update, or even make a pull request when you are feeling up to the task.*
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -15,12 +21,6 @@
 - [License Data](#license-data)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# OS-CFDB: Open Source - Common Findings Data Base
-
-This project aims to provide a single source of common findings seen on **Web/Application**, **Network**, and **Red Team** assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
-
-> *Please understand that this is **Open Source** project that is driven by **community** feedback. If you do not contribute, who will? Please take the time to correct, update, or even make a pull request when you are feeling up to the task.*
 
 ## Why?
 
