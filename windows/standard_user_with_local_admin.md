@@ -1,7 +1,7 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | SVR  |  CVSS  | Risk |
+| Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
 | Standard User with Local Admin  | 3  | 4.0-5.9  | Medium  |
 
