@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [OS-CFDB: Open Source - Common Findings Data Base](#os-cfdb-open-source---common-findings-data-base)
+  - [Why?](#why)
+  - [How to Interpret the Data](#how-to-interpret-the-data)
+    - [Finding Details](#finding-details)
+    - [Technical Information](#technical-information)
+    - [Finding Metadata](#finding-metadata)
+  - [How the Data is Supplied](#how-the-data-is-supplied)
+  - [Finding Classification and Scoring](#finding-classification-and-scoring)
+- [Current Finding Tree](#current-finding-tree)
+  - [Windows](#windows)
+- [License Data](#license-data)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # OS-CFDB: Open Source - Common Findings Data Base
 
 This project aims to provide a single source of common findings seen on **Web/Application**, **Network**, and **Red Team** assessments. While this project is scalable, it may not cover every single scenario applicable to your needs or reporting SOP (Standard Operating Procedures).
@@ -99,4 +117,3 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
