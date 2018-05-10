@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-|  Stored XSS  |  4 |  5.1-7.5 | Medium  |
+|  Stored XSS  |  4 |  5.1-7.5 | Medium-High  |
 
 ### Finding Service
 | Service  |
