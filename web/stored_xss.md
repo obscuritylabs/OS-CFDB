@@ -30,10 +30,9 @@
 | URL |
 |:-:|
 | https://nvd.nist.gov/download/800-53/800-53-controls.xml |
+| https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) |
 | https://attack.mitre.org/wiki/Technique/T1203 |
 | https://csrc.nist.gov/Glossary/?term=5519 |
-| https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) |
- 
 # Technical Information
 
 ### Description 
@@ -41,15 +40,19 @@ A vulnerability that allows attackers to inject malicious code into an otherwise
 ### Impact
 The impact  of an XSS attack is the same regardless of whether it is stored or reflected (or DOM Based). The difference is in how the payload arrives at the server. Do not be fooled into thinking that a “read only” or “brochureware” site is not vulnerable to serious reflected XSS attacks. XSS can cause a variety of problems for the end user that range in severity from an annoyance to complete account compromise. The most severe XSS attacks involve disclosure of the user’s session cookie, allowing an attacker to hijack the user’s session and take over the account. Other damaging attacks include the disclosure of end user files, installation of Trojan horse programs, redirect the user to some other page or site, or modify presentation of content. An XSS vulnerability allowing an attacker to modify a press release or news item could affect a company’s stock price or lessen consumer confidence. An XSS vulnerability on a pharmaceutical site could allow an attacker to modify dosage information resulting in an overdose. 
 ### Recommendation(s)
-The assessment team recommends that scripts used for administration, password changes, authenticated share mounting be removed. Automated password changes and authenticated share mounting should be accomplished with proper AD group delegation. A thorough audit should be conducted domain wide to identify other scripts exposing sensitive data or credentials.  
+The assessment team highly recommends that any site potentially vulnerable to XSS conform to regular penetration testing.  Rigorous testing is necessary because this attack has  many variants. Sometimes, an application that properly tries to filter any malicious scripts gets confused and allows a script. Because of this we can never say that a website is fully protected. The most common recommendations are to conduct user input validation and to employ an XSS filter.    
 
 # Finding Metadata
 ### Finding Development
 | Author Name | Twitter Handle | Email | Created | Updated |
 |:-:|:-:|:-:|:-:|:-:|
-| Alexander Rymdeko-Harvey | @Killswitch-GUI |  | 09/27/2017 | 09/27/2017 |
+| Keelyn Roberts | @real_slacker007 |  | 05/9/2018 | 05/9/2018 |
 
 ### Finding Sources
 | URL | 
 |:-:|
-| Http://google.com |
+| https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet |
+| https://nvd.nist.gov/download/800-53/800-53-controls.xml |
+| https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) |
+| https://attack.mitre.org/wiki/Technique/T1203 |
+| https://csrc.nist.gov/Glossary/?term=5519 |
