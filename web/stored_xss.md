@@ -32,6 +32,7 @@
 | https://nvd.nist.gov/download/800-53/800-53-controls.xml |
 | https://attack.mitre.org/wiki/Technique/T1203 |
 | https://csrc.nist.gov/Glossary/?term=5519 |
+| https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) |
  
 # Technical Information
 
