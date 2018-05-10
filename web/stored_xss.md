@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-| Insecure SYSVOL Scripts  |  3 |  4.0-5.9 | Medium  |
+|  Stored XSS  |  3 |  4.0-5.9 | Medium  |
 
 ### Finding Service
 | Service  |
