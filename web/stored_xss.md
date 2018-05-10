@@ -29,7 +29,9 @@
 ### Finding Refrences
 | URL |
 |:-:|
-| https://adsecurity.org/?p=2288 |
+| https://nvd.nist.gov/download/800-53/800-53-controls.xml |
+| https://attack.mitre.org/wiki/Technique/T1203 |
+| https://csrc.nist.gov/Glossary/?term=5519 |
  
 # Technical Information
 
