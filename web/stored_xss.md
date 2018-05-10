@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-|  Stored XSS  |  3 |  4.0-5.9 | Medium  |
+|  Stored XSS  |  4 |  5.1-7.5 | Medium  |
 
 ### Finding Service
 | Service  |
@@ -14,8 +14,13 @@
 ### Finding NIST 800-53 Controls
 | NIST  |
 |:-:|
-| IA-2  |
-|  IA-7 |
+| SI-10  |
+| RA-5   |
+| CA-8   |
+| PT-3   |
+| AE-2   |
+| CM-4   |
+
 
 ### Finding MITRE ATT&CK Corelation
 | Tactic | ID |
