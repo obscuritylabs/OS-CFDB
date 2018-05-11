@@ -45,7 +45,7 @@ The use of software, data, or commands to take advantage of a weakness in an Int
 For websites and databases, the OWASP top 10 gives a good list of the top 10 most common web-based vulnerabilities.
 
 ### Impact
-If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, as well as target users accounts.
+If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, leak sensitive data, or target users accounts.
 
 ### Recommendation(s)
 The assessment team recommends that thorough testing be conducted on all resources to identify other web applications that are exposing sensitive data. In addition to additional testing, the following are some guidelines to follow so you can make sure that your web applications are well protected against the most obvious information disclosure issues:
