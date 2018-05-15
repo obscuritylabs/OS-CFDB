@@ -41,8 +41,7 @@
 # Technical Information
 
 ### Description 
-The use of software, data, or commands to take advantage of a weakness in an Internet-facing computer system or program in order to cause unintended or unanticipated behavior. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL), standard services (like SMB2 or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services. Depending on the flaw being exploited this may include Exploitation for Defense Evasion.
-For websites and databases, the OWASP top 10 gives a good list of the top 10 most common web-based vulnerabilities.
+The use of software, data, or commands to take advantage of a weakness in an Internet-facing computer system or program in order to cause unintended information disclosures. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL), standard services (like SMB2 or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services. Depending on the flaw being exploited this information could cause critical second and third order effects, such as revealing the type of backend database being used, exposing user information, or even dumping the entire database.
 
 ### Impact
 If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, leak sensitive data, or target users accounts.
