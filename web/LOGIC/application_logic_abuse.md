@@ -33,6 +33,7 @@
 | URL |
 |:-:|
 | https://www.owasp.org/index.php/Testing_for_business_logic |
+| https://csrc.nist.gov/Projects/Access-Control-Policy-Tool/Access-Control-Policy-Testing |
 
 # Technical Information
 
@@ -67,3 +68,4 @@ The assessment team recommends that thorough testing be conducted on all resourc
 | URL | 
 |:-:|
 | https://www.owasp.org/index.php/Testing_for_business_logic |
+| https://csrc.nist.gov/Projects/Access-Control-Policy-Tool/Access-Control-Policy-Testing |
