@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-| Database Information Disclosure  | 1-5  |  0.0-10.0 | Medium-High  |
+| Personally Identifiable  Information Disclosure  | 2  |  5 | Medium  |
 
 ### Finding Service
 | Service  |
