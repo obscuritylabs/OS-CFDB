@@ -32,11 +32,7 @@
 ### Finding Refrences
 | URL |
 |:-:|
-| https://attack.mitre.org/wiki/Technique/T1190 |
-| http://cwe.mitre.org/data/definitions/284.html |
-| https://portswigger.net/kb/issues/00600200_email-addresses-disclosed |
-| https://portswigger.net/kb/issues/00600400_social-security-numbers-disclosed |
-| https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-53r4.pdf |
+| https://www.owasp.org/index.php/Testing_for_business_logic |
 
 # Technical Information
 
