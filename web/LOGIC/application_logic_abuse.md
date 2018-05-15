@@ -47,7 +47,7 @@ This type of vulnerability is usually one of the hardest to detect, and usually 
 The assessment team recommends that thorough testing be conducted on all resources to identify other web applications that are exposing sensitive data. In addition to additional testing, the following are some guidelines to follow so you can make sure that your web applications are well protected against the most obvious information disclosure issues:
 
 
-# Test business logic data validation (OTG-BUSLOGIC-001)
+#### Test business logic data validation (OTG-BUSLOGIC-001)
 
 In business logic data validation testing, we verify that the application does not allow users to insert “unvalidated” data into the system/application. This is important because without this safeguard attackers may be able to insert “unvalidated” data/information into the application/system at “handoff points” where the application/system believes that the data/information is “good” and has been valid since the “entry points” performed data validation as part of the business logic workflow.
 
