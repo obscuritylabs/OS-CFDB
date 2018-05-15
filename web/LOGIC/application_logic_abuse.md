@@ -46,17 +46,50 @@ This type of vulnerability is usually one of the hardest to detect, and usually 
 ### Recommendation(s)
 The assessment team recommends that thorough testing be conducted on all resources to identify other web applications that are exposing sensitive data. In addition to additional testing, the following are some guidelines to follow so you can make sure that your web applications are well protected against the most obvious information disclosure issues:
 
-* Make sure that your web server does not send out response headers that reveal information about the backend technology type or version.
-* Make sure that all the services running on the server’s open ports do not reveal information about their builds and versions.
-* Always make sure that proper access controls and authorizations are in place in order to disallow access for attackers on all web servers, services and web applications.
-* Do not hard code credentials, API keys, IP addresses, or any other sensitive information in the code, not even in the form of comments.
-* Configure the correct MIME types on your web server for all the different files being used in your web applications.
-* Sensitive data or files that do not need to be on the web servers should never be uploaded on the web server.
-* Always check whether each of the requests to create/edit/view/delete resources has proper access controls, preventing privilege escalation issues and making sure that all the confidential information remains confidential.
-* Make sure that your web application processes user input correctly, and that a generic response is always returned for all the resources that don’t exist/are disallowed in order to confuse attackers.
-* Enough validations should be employed by the backend code in order to catch all the exceptions and prevent the leakage of valuable information.
-* Configure the web server to suppress any exceptions that may arise and return a generic error page.
-* Configure the web server to disallow directory listing and make sure that the web application always shows a default web page.  
+
+#Test business logic data validation (OTG-BUSLOGIC-001)
+
+In business logic data validation testing, we verify that the application does not allow users to insert “unvalidated” data into the system/application. This is important because without this safeguard attackers may be able to insert “unvalidated” data/information into the application/system at “handoff points” where the application/system believes that the data/information is “good” and has been valid since the “entry points” performed data validation as part of the business logic workflow.
+
+
+#Test Ability to forge requests (OTG-BUSLOGIC-002)
+
+In forged and predictive parameter request testing, we verify that the application does not allow users to submit or alter data to any component of the system that they should not have access to, are accessing at that particular time or in that particular manner. This is important because without this safeguard attackers may be able to “fool/trick” the application into letting them into sections of thwe application of system that they should not be allowed in at that particular time, thus circumventing the applications business logic workflow.
+
+
+#Test Integrity Checks (OTG-BUSLOGIC-003)
+
+In integrity check and tamper evidence testing, we verify that the application does not allow users to destroy the integrity of any part of the system or its data. This is important because without these safe guards attackers may break the business logic workflow and change of compromise the application/system data or cover up actions by altering information including log files.
+
+
+#Test for Process Timing (OTG-BUSLOGIC-004)
+
+In process timing testing, we verify that the application does not allow users to manipulate a system or guess its behavior based on input or output timing. This is important because without this safeguard in place attackers may be able to monitor processing time and determine outputs based on timing, or circumvent the application’s business logic by not completing transactions or actions in a timely manner.
+
+
+#Test Number of Times a Function Can be Used Limits (OTG-BUSLOGIC-005)
+
+In function limit testing, we verify that the application does not allow users to exercise portions of the application or its functions more times than required by the business logic workflow. This is important because without this safeguard in place attackers may be able to use a function or portion of the application more times than permissible per the business logic to gain additional benefits.
+
+
+#Testing for the Circumvention of Work Flows (OTG-BUSLOGIC-006)
+
+In circumventing workflow and bypassing correct sequence testing, we verify that the application does not allow users to perform actions outside of the “approved/required” business process flow. This is important because without this safeguard in place attackers may be able to bypass or circumvent workflows and “checks” allowing them to prematurely enter or skip “required” sections of the application potentially allowing the action/transaction to be completed without successfully completing the entire business process, leaving the system with incomplete backend tracking information.
+
+
+#Test Defenses Against Application Mis-use (OTG-BUSLOGIC-007)
+
+In application mis-use testing, we verify that the application does not allow users to manipulate the application in an unintended manner.
+
+
+#Test Upload of Unexpected File Types (OTG-BUSLOGIC-008)
+
+In unexpected file upload testing, we verify that the application does not allow users to upload file types that the system is not expecting or wanted per the business logic requirements. This is important because without these safeguards in place attackers may be able to submit unexpected files such as .exe or .php that could be saved to the system and then executed against the application or system.
+
+
+#Test Upload of Malicious Files (OTG-BUSLOGIC-009)
+
+In malicious file upload testing, we verify that the application does not allow users to upload files to the system that are malicious or potentially malicious to the system security. This is important because without these safeguards in place attackers may be able to upload files to the system that may spread viruses, malware or even exploits such as shellcode when executed.
 
 # Finding Metadata
 ### Finding Development
