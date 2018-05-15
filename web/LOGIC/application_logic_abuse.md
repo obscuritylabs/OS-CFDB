@@ -47,47 +47,47 @@ This type of vulnerability is usually one of the hardest to detect, and usually 
 The assessment team recommends that thorough testing be conducted on all resources to identify other web applications that are exposing sensitive data. In addition to additional testing, the following are some guidelines to follow so you can make sure that your web applications are well protected against the most obvious information disclosure issues:
 
 
-#Test business logic data validation (OTG-BUSLOGIC-001)
+# Test business logic data validation (OTG-BUSLOGIC-001)
 
 In business logic data validation testing, we verify that the application does not allow users to insert “unvalidated” data into the system/application. This is important because without this safeguard attackers may be able to insert “unvalidated” data/information into the application/system at “handoff points” where the application/system believes that the data/information is “good” and has been valid since the “entry points” performed data validation as part of the business logic workflow.
 
 
-#Test Ability to forge requests (OTG-BUSLOGIC-002)
+# Test Ability to forge requests (OTG-BUSLOGIC-002)
 
 In forged and predictive parameter request testing, we verify that the application does not allow users to submit or alter data to any component of the system that they should not have access to, are accessing at that particular time or in that particular manner. This is important because without this safeguard attackers may be able to “fool/trick” the application into letting them into sections of thwe application of system that they should not be allowed in at that particular time, thus circumventing the applications business logic workflow.
 
 
-#Test Integrity Checks (OTG-BUSLOGIC-003)
+# Test Integrity Checks (OTG-BUSLOGIC-003)
 
 In integrity check and tamper evidence testing, we verify that the application does not allow users to destroy the integrity of any part of the system or its data. This is important because without these safe guards attackers may break the business logic workflow and change of compromise the application/system data or cover up actions by altering information including log files.
 
 
-#Test for Process Timing (OTG-BUSLOGIC-004)
+# Test for Process Timing (OTG-BUSLOGIC-004)
 
 In process timing testing, we verify that the application does not allow users to manipulate a system or guess its behavior based on input or output timing. This is important because without this safeguard in place attackers may be able to monitor processing time and determine outputs based on timing, or circumvent the application’s business logic by not completing transactions or actions in a timely manner.
 
 
-#Test Number of Times a Function Can be Used Limits (OTG-BUSLOGIC-005)
+# Test Number of Times a Function Can be Used Limits (OTG-BUSLOGIC-005)
 
 In function limit testing, we verify that the application does not allow users to exercise portions of the application or its functions more times than required by the business logic workflow. This is important because without this safeguard in place attackers may be able to use a function or portion of the application more times than permissible per the business logic to gain additional benefits.
 
 
-#Testing for the Circumvention of Work Flows (OTG-BUSLOGIC-006)
+# Testing for the Circumvention of Work Flows (OTG-BUSLOGIC-006)
 
 In circumventing workflow and bypassing correct sequence testing, we verify that the application does not allow users to perform actions outside of the “approved/required” business process flow. This is important because without this safeguard in place attackers may be able to bypass or circumvent workflows and “checks” allowing them to prematurely enter or skip “required” sections of the application potentially allowing the action/transaction to be completed without successfully completing the entire business process, leaving the system with incomplete backend tracking information.
 
 
-#Test Defenses Against Application Mis-use (OTG-BUSLOGIC-007)
+# Test Defenses Against Application Mis-use (OTG-BUSLOGIC-007)
 
 In application mis-use testing, we verify that the application does not allow users to manipulate the application in an unintended manner.
 
 
-#Test Upload of Unexpected File Types (OTG-BUSLOGIC-008)
+# Test Upload of Unexpected File Types (OTG-BUSLOGIC-008)
 
 In unexpected file upload testing, we verify that the application does not allow users to upload file types that the system is not expecting or wanted per the business logic requirements. This is important because without these safeguards in place attackers may be able to submit unexpected files such as .exe or .php that could be saved to the system and then executed against the application or system.
 
 
-#Test Upload of Malicious Files (OTG-BUSLOGIC-009)
+# Test Upload of Malicious Files (OTG-BUSLOGIC-009)
 
 In malicious file upload testing, we verify that the application does not allow users to upload files to the system that are malicious or potentially malicious to the system security. This is important because without these safeguards in place attackers may be able to upload files to the system that may spread viruses, malware or even exploits such as shellcode when executed.
 
