@@ -41,7 +41,7 @@
 # Technical Information
 
 ### Description 
-The use of software, data, or commands to take advantage of a weakness in an Internet-facing computer system or program in order to cause unintended information disclosures. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL), standard services (like SMB2 or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services. Depending on the flaw being exploited this information could cause critical second and third order effects, such as revealing the type of backend database being used, exposing user information, or even dumping the entire database.
+The use of software, data, or commands to take advantage of a weakness in an Internet-facing computer system or program in order to cause unintended information disclosure of user personal information. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL), standard services (like SMB2 or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services. Depending on the flaw being exploited this information could cause critical second and third order effects, such as a negative financial impact on users, and/or loss of reputation to the organization.
 
 ### Impact
 If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, as well as target users accounts.
