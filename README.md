@@ -117,10 +117,6 @@ Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a c
    * [weak_spn_password.md](./windows/weak_spn_password.md)
    * [wpad_enabled.md](./windows/wpad_enabled.md)
 
-## Contributors
-
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/obscuritylabs/OS-CFDB/graphs/contributors"><img src="https://opencollective.com/shields/contributors.svg?width=890" /></a>
 
 # License Data
 
