@@ -1,9 +1,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-| Default Administrator Enabled (RID 500)  |  3 |  4.0-5.9 | Medium  |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+| Default Administrator Enabled (RID 500)  |  3 |  4.0-5.9 | Medium  | OS-CFDB-1001 |
 
 ### Finding Service
 | Service  |
