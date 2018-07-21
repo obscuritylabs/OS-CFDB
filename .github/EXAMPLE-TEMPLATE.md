@@ -2,7 +2,7 @@
 
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk | ID |
-|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|
 | Insecure SYSVOL Scripts  |  3 |  4.0-5.9 | Medium  | OS-CFDB-0 |
 
 ### Finding Service
