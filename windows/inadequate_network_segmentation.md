@@ -1,9 +1,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-| Inadequate Network Segmentation   | 4  | 6.0 – 7.9  |  High  |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+| Inadequate Network Segmentation   | 4  | 6.0 – 7.9  |  High  | OS-CFDB-1003 |
 
 ### Finding Service
 | Service  |
