@@ -86,6 +86,15 @@ Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a c
 |            Level 2            |                2.0 – 3.9                 | The finding may allow an attacker to obtain sensitive information about a system, internal network, or other identifying data that could lead to further compromise.  |
 |            Level 1            |                 0.0 -1.9                 | The finding may allow an attacker to gather vague system information. This often occurs to do best practices not being properly implemented. |
 
+## Finding ID Matrix
+
+Each finding has a provided OS-CFDB ID to provide a Unique ID to each finding:
+
+| Finding Platform |  ID Prefix  | 
+| :--------------: | :---------: |
+|     Windows      | OS-CFDB-1***|
+
+
 # Current Finding Tree
 
 * [LICENSE](./LICENSE)
