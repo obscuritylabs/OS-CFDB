@@ -1,9 +1,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-|  Insecure Credential Storage | 4  | 6.0 – 7.9  |  High |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+|  Insecure Credential Storage | 4  | 6.0 – 7.9  |  High | OS-CFDB-1004
 
 ### Finding Service
 | Service  |
