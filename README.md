@@ -93,6 +93,12 @@ Each finding has a provided OS-CFDB ID to provide a Unique ID to each finding:
 | Finding Platform |  ID Prefix  | 
 | :--------------: | :---------: |
 |     Windows      | OS-CFDB-1***|
+|     MacOS        | OS-CFDB-2***|
+|     Linux        | OS-CFDB-3***|
+|     Andriod      | OS-CFDB-4***|
+|     IOS          | OS-CFDB-5***|
+|     Web          | OS-CFDB-6***|
+|     Phishing     | OS-CFDB-7***|
 
 
 # Current Finding Tree
