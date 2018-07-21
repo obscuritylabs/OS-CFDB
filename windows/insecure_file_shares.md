@@ -1,9 +1,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-|  Insecure File Shares | 3  | 4.0-5.9  | Medium  |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+|  Insecure File Shares | 3  | 4.0-5.9  | Medium  | OS-CFDB-1005 |
 
 ### Finding Service
 | Service  |
