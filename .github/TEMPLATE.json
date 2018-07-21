@@ -1,1 +1,57 @@
-
+{
+  "finding": {
+    "Finding Details": {
+      "Finding Matrix": [
+        {
+          "Title": "",
+          "VSR": 0,
+          "CVSS": "",
+          "Risk": "",
+          "ID": "",
+        }
+      ],
+      "Finding Service": [
+        {
+          "Service": ""
+        }
+      ],
+      "Finding NIST 800-53 Controls" : [
+        {
+          "NIST": ""
+        },
+        {
+          "NIST": ""
+        }
+      ],
+      "Finding MITRE ATT&CK Corelation" : [
+        {
+          "Name": "",
+          "Tactic": "",
+          "ID": "",
+          "Link": ""
+        }  
+      ],
+      "Finding Refrences": [
+        {
+          "URL": ""
+        }
+      ]
+    },
+    "Technical Information": {
+      "Description": "",
+      "Impact": "",
+      "Recommendation(s)": ""
+    },
+    "Finding Metadata": {
+      "Finding Development": [
+        {
+          "Author Name": "",
+          "Twitter Handle": "",
+          "Email": "",
+          "Created": "",
+          "Updated": ""
+        }
+      ]
+    }
+  }
+}
