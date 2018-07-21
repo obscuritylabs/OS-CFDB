@@ -1,0 +1,63 @@
+{
+  "finding": {
+    "Finding Details": {
+      "Finding Matrix": [
+        {
+          "Title": "Insecure Active Direcotry User ACLs",
+          "VSR": 5,
+          "CVSS": "8.0 – 10.0",
+          "Risk": "Critical",
+          "ID": "OS-CFDB-1000",
+        }
+      ],
+      "Finding Service": [
+        {
+          "Service": "Internal Penetration Testing"
+        },
+        {
+          "Service": "External Penetration Testing"
+        }
+      ],
+      "Finding NIST 800-53 Controls" : [
+        {
+          "NIST": "AC-6"
+        }
+      ],
+      "Finding MITRE ATT&CK Corelation" : [
+        {
+          "Name": "Credentials in Files",
+          "Tactic": "Credential Access",
+          "ID": "T1081",
+          "Link": "https://attack.mitre.org/wiki/Technique/T1081"
+        }  
+      ],
+      "Finding Refrences": [
+        {
+          "URL": "https://www.blackhat.com/docs/us-17/wednesday/us-17-Robbins-An-ACE-Up-The-Sleeve-Designing-Active-Directory-DACL-Backdoors-wp.pdf"
+        },
+        {
+          "URL": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa446597(v=vs.85).aspx"
+        },
+        {
+          "URL": "https://blogs.technet.microsoft.com/pfesweplat/2017/01/28/forensics-active-directory-acl-investigation/"
+        }
+      ]
+    },
+    "Technical Information": {
+      "Description": "",
+      "Impact": "",
+      "Recommendation(s)": ""
+    },
+    "Finding Metadata": {
+      "Finding Development": [
+        {
+          "Author Name": "",
+          "Twitter Handle": "",
+          "Email": "",
+          "Created": "",
+          "Updated": ""
+        }
+      ]
+    }
+  }
+}
