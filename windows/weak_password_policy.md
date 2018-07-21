@@ -1,9 +1,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-| Weak Password Policy   | 3  | 4.0-5.9  | Medium  |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+| Weak Password Policy   | 3  | 4.0-5.9  | Medium  | OS-CFDB-1010 | 
 
 ### Finding Service
 | Service  |
