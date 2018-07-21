@@ -2,9 +2,9 @@
 # Finding Details 
 
 ### Finding Matrix
-| Title  | VSR  |  CVSS  | Risk |
-|:-:|:-:|:-:|:-:|
-|  Weak SPN Password  | 5  | 8.0 – 10.0  | Critical  |
+| Title  | VSR  |  CVSS  | Risk | ID |
+|:-:|:-:|:-:|:-:|:-:|
+|  Weak SPN Password  | 5  | 8.0 – 10.0  | Critical  |  OS-CFDB-1011 | 
 
 ### Finding Service
 | Service  |
