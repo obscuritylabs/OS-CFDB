@@ -35,5 +35,5 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python convert.py
+            python .convert.py
           
