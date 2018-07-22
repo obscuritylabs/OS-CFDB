@@ -7,7 +7,7 @@
           "VSR": 5,
           "CVSS": "8.0 – 10.0",
           "Risk": "Critical",
-          "ID": "OS-CFDB-1000",
+          "ID": "OS-CFDB-1000"
         }
       ],
       "Finding Service": [
