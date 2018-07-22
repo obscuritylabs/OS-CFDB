@@ -7,7 +7,7 @@
           "VSR": 0,
           "CVSS": "6.0 – 7.9",
           "Risk": "High",
-          "ID": "OS-CFDB-1002",
+          "ID": "OS-CFDB-1002"
         }
       ],
       "Finding Service": [
