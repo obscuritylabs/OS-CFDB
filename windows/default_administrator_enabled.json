@@ -30,7 +30,7 @@
         },
         {
           "NIST": "IA-3"
-        },
+        }
       ],
       "Finding MITRE ATT&CK Corelation" : [
         {
