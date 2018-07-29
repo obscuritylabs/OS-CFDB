@@ -1,55 +1,55 @@
 {
   "finding": {
-    "Finding Details": {
-      "Finding Matrix": [
+    "findingDetails": {
+      "findingMatrix": [
         {
-          "Title": "",
-          "VSR": 0,
-          "CVSS": "",
-          "Risk": "",
-          "ID": ""
+          "title": "",
+          "vsr": 0,
+          "cvss": "",
+          "risk": "",
+          "id": ""
         }
       ],
-      "Finding Service": [
+      "findingService": [
         {
-          "Service": ""
+          "service": ""
         }
       ],
-      "Finding NIST 800-53 Controls" : [
+      "nistControls" : [
         {
-          "NIST": ""
+          "nist": ""
         },
         {
-          "NIST": ""
+          "nist": ""
         }
       ],
-      "Finding MITRE ATT&CK Corelation" : [
+      "mitreAtt&ck" : [
         {
-          "Name": "",
-          "Tactic": "",
-          "ID": "",
-          "Link": ""
+          "name": "",
+          "tactic": "",
+          "id": "",
+          "link": ""
         }  
       ],
-      "Finding Refrences": [
+      "findingRefrences": [
         {
-          "URL": ""
+          "url": ""
         }
       ]
     },
-    "Technical Information": {
-      "Description": "",
-      "Impact": "",
-      "Recommendation(s)": ""
+    "technicalInformation": {
+      "description": "",
+      "impact": "",
+      "recommendation": ""
     },
-    "Finding Metadata": {
-      "Finding Development": [
+    "findingMetadata": {
+      "findingdDevelopment": [
         {
-          "Author Name": "",
-          "Twitter Handle": "",
-          "Email": "",
-          "Created": "",
-          "Updated": ""
+          "authorName": "",
+          "twitterHandle": "",
+          "email": "",
+          "created": "",
+          "updated": ""
         }
       ]
     }
