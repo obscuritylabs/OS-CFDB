@@ -1,15 +1,14 @@
 {
   "finding": {
     "findingDetails": {
-      "findingMatrix": [
+      "findingMatrix":
         {
           "title": "Default Administrator Enabled (RID 500)",
           "vsr": 3,
           "cvss": "4.0-5.9",
           "risk": "Medium",
           "id": "OS-CFDB-1001"
-        }
-      ],
+        },
       "findingService": [
         {
           "service": "Internal Penetration Testing"
