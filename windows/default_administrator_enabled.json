@@ -1,67 +1,67 @@
 {
   "finding": {
-    "Finding Details": {
-      "Finding Matrix": [
+    "findingDetails": {
+      "findingMatrix": [
         {
-          "Title": "Default Administrator Enabled (RID 500)",
-          "VSR": 3,
-          "CVSS": "4.0-5.9",
-          "Risk": "Medium",
-          "ID": "OS-CFDB-1001"
+          "title": "Default Administrator Enabled (RID 500)",
+          "vsr": 3,
+          "cvss": "4.0-5.9",
+          "risk": "Medium",
+          "id": "OS-CFDB-1001"
         }
       ],
-      "Finding Service": [
+      "findingService": [
         {
-          "Service": "Internal Penetration Testing"
+          "service": "Internal Penetration Testing"
         },
         {
-          "Service": "External Penetration Testing"
+          "service": "External Penetration Testing"
         }
       ],
-      "Finding NIST 800-53 Controls" : [
+      "nistControls" : [
         {
-          "NIST": "CM-2"
+          "nist": "CM-2"
         },
         {
-          "NIST": "CM-6"
+          "nist": "CM-6"
         },
         {
-          "NIST": "IA-2"
+          "nist": "IA-2"
         },
         {
-          "NIST": "IA-3"
+          "nist": "IA-3"
         }
       ],
-      "Finding MITRE ATT&CK Corelation" : [
+      "mitreAtt&ck" : [
         {
-          "Name": "Pass the Hash",
-          "Tactic": "Lateral Movement",
-          "ID": "T1075",
-          "Link": "https://attack.mitre.org/wiki/Technique/T1075"
+          "name": "Pass the Hash",
+          "tactic": "Lateral Movement",
+          "id": "T1075",
+          "link": "https://attack.mitre.org/wiki/Technique/T1075"
         }  
       ],
-      "Finding Refrences": [
+      "findingRefrences": [
         {
-          "URL": "https://nvd.nist.gov/800-53/Rev4/control/IA-2"
+          "url": "https://nvd.nist.gov/800-53/Rev4/control/IA-2"
         },
         {
-          "URL": "https://technet.microsoft.com/en-us/mt227395.aspx"
+          "url": "https://technet.microsoft.com/en-us/mt227395.aspx"
         }
       ]
     },
-    "Technical Information": {
-      "Description": "The default administrator account is often used during initial setup of a host and joining an AD (Active Directory) Domain environment. This type of account is often referred to as BUILTIN\\Administrator, also known as NT AUTHORITY\\Administrator with the relative identifier (RID) 500. This account exists by default on all Microsoft Windows (Windows NT-based) systems as well as Active Directory domains. The assessment team discovered that hosts contained an enabled Administrator Account.",
-      "Impact": "If an attacker can gain elevated system privileges on a compromised host, the attacker could gather clear-text and the NTLM hash of this account. These credentials could be used to further access or lateral spread mechanisms such as Pass-The-Hash attacks where other machines use this same password.",
-      "Recommendation(s)": "The assessment team recommends disabling the built-in Administrator if business requirements allow for it. This account should only be used during initial setup and disaster recovery if possible. If disabling the account is not an option, its recommend to use a solution such as LAPS (Local Administrator Password Solution) or enroll in third-party solutions to randomize and manage bulk password management."
+    "technicalInformation": {
+      "description": "The default administrator account is often used during initial setup of a host and joining an AD (Active Directory) Domain environment. This type of account is often referred to as BUILTIN\\Administrator, also known as NT AUTHORITY\\Administrator with the relative identifier (RID) 500. This account exists by default on all Microsoft Windows (Windows NT-based) systems as well as Active Directory domains. The assessment team discovered that hosts contained an enabled Administrator Account.",
+      "impact": "If an attacker can gain elevated system privileges on a compromised host, the attacker could gather clear-text and the NTLM hash of this account. These credentials could be used to further access or lateral spread mechanisms such as Pass-The-Hash attacks where other machines use this same password.",
+      "recommendation": "The assessment team recommends disabling the built-in Administrator if business requirements allow for it. This account should only be used during initial setup and disaster recovery if possible. If disabling the account is not an option, its recommend to use a solution such as LAPS (Local Administrator Password Solution) or enroll in third-party solutions to randomize and manage bulk password management."
     },
-    "Finding Metadata": {
-      "Finding Development": [
+    "findingMetadata": {
+      "findingDevelopment": [
         {
-          "Author Name": "Alexander Rymdeko-Harvey",
-          "Twitter Handle": "@Killswitch-GUI",
-          "Email": "",
-          "Created": "09/27/2017",
-          "Updated": "09/27/2017"
+          "authorName": "Alexander Rymdeko-Harvey",
+          "twitterHandle": "@Killswitch-GUI",
+          "email": "",
+          "created": "09/27/2017",
+          "updated": "09/27/2017"
         }
       ]
     }
