@@ -1,15 +1,14 @@
 {
   "finding": {
     "findingDetails": {
-      "findingMatrix": [
+      "findingMatrix":
         {
           "title": "",
           "vsr": 0,
           "cvss": "",
           "risk": "",
           "id": ""
-        }
-      ],
+        },
       "findingService": [
         {
           "service": ""
