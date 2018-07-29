@@ -4,7 +4,7 @@
       "findingMatrix":
         {
           "title": "Firewall Misconfiguration",
-          "vsr": 1,
+          "vsr": 2,
           "cvss": "6.0 – 7.9",
           "risk": "High",
           "id": "OS-CFDB-1002"
