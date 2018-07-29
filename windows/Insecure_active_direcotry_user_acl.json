@@ -1,15 +1,14 @@
 {
   "finding": {
     "findingDetails": {
-      "findingMatrix": [
+      "findingMatrix":
         {
           "title": "Insecure Active Direcotry User ACLs",
           "vsr": 5,
           "cvss": "8.0 – 10.0",
           "risk": "Critical",
           "id": "OS-CFDB-1000"
-        }
-      ],
+        },
       "findingService": [
         {
           "service": "Internal Penetration Testing"
