@@ -22,7 +22,7 @@
           "nist": ""
         }
       ],
-      "mitreAtt&ck" : [
+      "mitreAttack" : [
         {
           "name": "",
           "tactic": "",
