@@ -31,7 +31,7 @@
           "nist": "IA-3"
         }
       ],
-      "mitreAtt&ck" : [
+      "mitreAttack" : [
         {
           "name": "Pass the Hash",
           "tactic": "Lateral Movement",
