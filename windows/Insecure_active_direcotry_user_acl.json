@@ -22,7 +22,7 @@
           "nist": "AC-6"
         }
       ],
-      "mitreAtt&ck" : [
+      "mitreAttack" : [
         {
           "name": "Credentials in Files",
           "tactic": "Credential Access",
