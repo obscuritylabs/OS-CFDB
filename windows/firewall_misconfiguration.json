@@ -25,7 +25,7 @@
           "nist": "SC-7"
         }
       ],
-      "mitreAtt&ck" : [
+      "mitreAttack" : [
         {
           "name": "Exfiltration Over Command and Control Channel",
           "tactic": "Exfiltration",
