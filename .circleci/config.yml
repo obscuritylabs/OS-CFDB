@@ -37,7 +37,7 @@ jobs:
             . venv/bin/activate
             python .convert.py
             
-  build: 
+  test: 
     docker:
       - image: docker:18.06.0-ce-git
     steps:
