@@ -19,8 +19,8 @@ RUN pip install flask && \
     pip install Flask-Caching && \
     pip install flask_apscheduler
 
-#RUN git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
+RUN git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
 
 #RUN python '/root/cfdb-api/init_mongo.py' /root/OS-CFDB/
 
-ENTRYPOINT ["uwsgi", "--ini", "/root/cfdb-api/uwsgi.ini"]
+ENTRYPOINT ["uwsgi", "--ini", "/root/cfdb-app/uwsgi.ini"]

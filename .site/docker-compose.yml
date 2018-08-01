@@ -13,6 +13,19 @@ services:
     volumes:
       - ./cfdb-api:/root/cfdb-api
       - /tmp:/tmp
+  cfdb-app:
+    build: uwsgi-cfdb-app
+    restart: always
+    depends_on:
+      - redis
+      - mongo
+      - web
+    links:
+      - redis:redis
+      - mongo:mongo
+    volumes:
+      - ./cfdb-app:/root/cfdb-app
+      - /tmp:/tmp
   redis:
     image: redis
     restart: always
