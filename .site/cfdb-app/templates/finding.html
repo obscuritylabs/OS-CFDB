@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block body %}        
+</section>
+<div class="box cta">
+  <p class="has-text-centered">
+      <span class="tag is-primary">New</span> We plan on releasing bi-monthly edits and updates to the OS-CFDB project! Please check out the search function!
+  </p>
+</div>
+
+<section class="container"> 
+<section class="info-tiles">
+  <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-parent">
+          <article class="tile is-child box notification is-primary">
+              <p class="title">{{ doc.finding.findingDetails.findingMatrix.title }}</p>
+          </article>
+      </div>
+  </div>
+</section>
+<section class="info-tiles">
+  <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">{{ doc.finding.findingDetails.findingMatrix.vsr }}</p>
+              <p class="subtitle">VSR</p>
+          </article>
+      </div>
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">{{ doc.finding.findingDetails.findingMatrix.cvss }}</p>
+              <p class="subtitle">CVSS</p>
+          </article>
+      </div>
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">{{ doc.finding.findingDetails.findingMatrix.risk }}</p>
+              <p class="subtitle">Risk</p>
+          </article>
+      </div>
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">{{ doc.finding.findingDetails.findingMatrix.id }}</p>
+              <p class="subtitle">ID</p>
+          </article>
+      </div>
+  </div>
+</section>
+<div class="columns">
+  <div class="column">
+    <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Finding MITRE ATT&CK Corelation
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Name">Name</abbr></th>
+                  <th><abbr title="Tactic">Tactic</abbr></th>
+                  <th><abbr title="ID">ID</abbr></th>
+                  <th><abbr title="Link">Link</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for x in doc.finding.findingDetails.mitreAttack %}
+              <tr>
+                <th>{{ x.name }}</th>
+                <td>{{ x.tactic }}</td>
+                <td>{{ x.id }}</td>
+                <td><a href="{{ x.link }}">{{ x.link }}</a></td>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="column">
+    <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Finding Refrences
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th><abbr title="URL">URL</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for x in doc.finding.findingDetails.findingRefrences %}
+              <tr>
+                <td><a href="{{ x.url }}">{{ x.url }}</a></td>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<section class="info-tiles">
+  <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-parent">
+          <article class="tile is-child box notification is-primary">
+              <p class="title">Finding Metadata</p>
+          </article>
+      </div>
+  </div>
+</section>
+<div class="columns" style="height: 100%;">
+  <div class="column is-one-quater">
+    <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Finding Service(s)
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Service">Service</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for x in doc.finding.findingDetails.findingService %}
+              <tr>
+                <th>{{ x.service }}</th>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="column is-one-quater">
+    <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+             NIST 800-53 Control(s)
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th><abbr title="NIST">NIST</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for x in doc.finding.findingDetails.nistControls %}
+              <tr>
+                <td>{{ x.nist }}</td>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="column is-half">
+    <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Finding Development
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th><abbr title="Author Name">Author Name</abbr></th>
+                  <th><abbr title="Twitter Handle">Twitter Handle</abbr></th>
+                  <th><abbr title="Email">Email</abbr></th>
+                  <th><abbr title="Created">Created</abbr></th>
+                  <th><abbr title="Updated">Updated</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for x in doc.finding.findingMetadata.findingDevelopment %}
+              <tr>
+                <td>{{ x.authorName }}</td>
+                <td>{{ x.twitterHandle }}</td>
+                <td>{{ x.email }}</td>
+                <td>{{ x.created }}</td>
+                <td>{{ x.updated }}</td>
+              </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<section class="info-tiles">
+  <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-parent ">
+          <article class="tile is-child box notification is-primary">
+              <p class="title">Technical Information</p>
+          </article>
+      </div>
+  </div>
+</section>
+<section class="info-tiles">
+  <div class="tile is-ancestor">
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">Description</p>
+              <p class="subtitle">The technical overview of a finding, not meant to be all-inclusive.</p>
+              <div class="content">
+                {{ doc.finding.technicalInformation.description }}
+              </div>
+          </article>
+      </div>
+  </div>
+  <div class="tile is-ancestor">
+      <div class="tile is-parent">
+          <article class="tile is-child box">
+              <p class="title">Impact</p>
+              <p class="subtitle">How a finding result will affect an organization.</p>
+              <div class="content">
+                {{ doc.finding.technicalInformation.description }}
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+
+
+{% endblock %}

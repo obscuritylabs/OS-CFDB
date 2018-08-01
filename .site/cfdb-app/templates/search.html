@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block body %}        
+</section>
+<section class="hero is-fullheight is-info is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <img class="resize" src="https://raw.githubusercontent.com/obscuritylabs/OS-CFDB/master/.github/os-cfdb-white.png">
+      </h1>
+      <div class="box">
+        <form action="{{ url_for('search_console')}}" method="post">
+        <div class="field has-addons" id="the-basics">
+            <p class="control has-icons-left is-expanded">
+                <input class="input is-primary" type="text" name="string" value="" placeholder="Go ahead and start typing...">
+                <span class="icon is-small is-left">
+			      <i class="fas fa-check-double fa-xs"></i>
+			    </span>
+            </p>
+            <p class="control">
+                <a class="button is-primary">
+                    <i class="fab fa-searchengin" aria-hidden="true">
+                    	Search
+                    </i>
+                </a>
+            </p>
+        </div>
+      </form> 
+    </div>
+    </div>
+  </div>
+</section>
+        
+{% endblock %}

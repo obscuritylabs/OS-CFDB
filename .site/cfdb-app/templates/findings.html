@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block body %}        
+</section>
+<div class="box cta">
+	<p class="has-text-centered">
+	    <span class="tag is-primary">New</span> We plan on releasing bi-monthly edits and updates to the OS-CFDB project! Please check out the search function!
+	</p>
+</div>
+
+<section class="container"> 
+	{% for item in docs %}
+	<div class="box is-success">
+	  <article class="media">
+	    <div class="media-left">
+	      <figure class="image is-64x64">
+	      	{% if item.finding.findingDetails.findingMatrix.vsr   == 5 %}
+	      		{% set warn = 'DarkRed' %}
+	      	{% elif item.finding.findingDetails.findingMatrix.vsr == 4 %}
+	      		{% set warn = 'DarkOrange' %}
+	      	{% elif item.finding.findingDetails.findingMatrix.vsr == 3 %}
+	      		{% set warn = 'Gold' %}
+	      	{% elif item.finding.findingDetails.findingMatrix.vsr == 2 %}
+	      		{% set warn = 'DarkGreen' %}
+	      	{% elif item.finding.findingDetails.findingMatrix.vsr == 1 %}
+	      		{% set warn = 'LimeGreen' %}
+	      	{% endif %}
+	        <i class="fas fa-exclamation-triangle fa-4x" style="color:{{ warn }};"></i>
+	      </figure>
+	    </div>
+	    <div class="media-content">
+	      <div class="content">
+	        <p>
+	          <strong><a href="{{ url_for('finding_id', f_id=item.finding.findingDetails.findingMatrix.id) }}"> {{ item.finding.findingDetails.findingMatrix.title }} </a></strong> 
+	          {% for x in item.finding.findingMetadata.findingDevelopment %}
+	          	<small>{{ x.twitterHandle }}</small> <small>{{ x.updated }}</small>
+	          {% endfor %}
+	          <br>
+	          <strong>Vulnerability Severity Rating (VSR): </strong> <small>{{ item.finding.findingDetails.findingMatrix.vsr }}</small>
+	          <br>
+	          <strong>OS-CFDB Identity (ID): </strong> <small>{{ item.finding.findingDetails.findingMatrix.id }}</small>
+	          <br>
+	          {{ item.finding.technicalInformation.description | truncate(300) }}
+	        </p>
+	      </div>
+	      <nav class="level is-mobile">
+	        <div class="level-left">
+	          <a class="level-item" aria-label="forward" href="{{ url_for('finding_id', f_id=item.finding.findingDetails.findingMatrix.id) }}" data-clipboard-target="foo">
+	            <span class="icon is-small">
+	              <i class="fas fa-link" aria-hidden="true"></i>
+	            </span>
+	          </a>
+	          <a class="level-item" aria-label="retweet">
+	            <span class="icon is-small">
+	              <i class="fas fa-retweet" aria-hidden="true"></i>
+	            </span>
+	          </a>
+	          <a class="level-item" aria-label="like">
+	            <span class="icon is-small">
+	              <i class="fab fa-github" aria-hidden="true"></i>
+	            </span>
+	          </a>
+	        </div>
+	      </nav>
+	    </div>
+	  </article>
+	</div>
+	{% endfor %}
+
+
+
+{% endblock %}

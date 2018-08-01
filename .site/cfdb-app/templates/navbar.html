@@ -1,0 +1,36 @@
+<div class="hero-head">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../">
+                    <img src="/static/img/os-cfdb-white.png" alt="Logo">
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="tabs is-right">
+                        <ul>
+                            <li class="{% if active=='index' %}is-active{%endif %}"><a href="{{ url_for('index')}}"><i class="fas fa-home"></i>-Home</a></li>
+                            <li class="{% if active=='search' %}is-active{%endif %}"><a id="search" href="{{ url_for('search')}}"><i class="fab fa-searchengin"></i>-Search</a></li>
+                            <li class="{% if active=='findings' %}is-active{%endif %}"><a id="findings " href="{{ url_for('findings')}}"><i class="fas fa-fingerprint"></i>-Findings</a></li>
+                            <!-- <li class="{% if active=='docs' %}is-active{%endif %}"><a id="docs" href="{{ url_for('docs')}}">API Docs</a></li> -->
+                        </ul>
+                        <span class="navbar-item">
+                            <a class="button is-white is-outlined" href="https://github.com/obscuritylabs/OS-CFDB">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span title="Hello from the other side">View Source</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
