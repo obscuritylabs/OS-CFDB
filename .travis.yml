@@ -23,3 +23,4 @@ script:
     - docker version
     - docker-compose version
     - python .convert.py .
+    - ./build.sh
