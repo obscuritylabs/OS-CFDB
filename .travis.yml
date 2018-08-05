@@ -37,12 +37,12 @@ deploy:
   # teardown old infrustructure
   - provider: script
     skip_cleanup: true
-    script: bash teardown.sh
+    script: sudo bash teardown.sh
     on:
       branch: master
   # deploy master to production
   - provider: script
     skip_cleanup: true
-    script: bash deploy.sh
+    script: sudo bash deploy.sh
     on:
       branch:  master
