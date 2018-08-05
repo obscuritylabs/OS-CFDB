@@ -232,6 +232,15 @@
     - docker_service:
         project_src: "{{cfdb_install_dir}}{{cfdb_docker_compose_dir}}"
 
+- name: Populate DB and Init
+  hosts: launched
+  become: True
+  gather_facts: True
+  tasks:
+    - command: docker exec -t site_cfdb-api_1 git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
+    - command: docker exec -t site_cfdb-api_1 python /root/cfdb-api/init_mongo.py /root/OS-CFDB/
+
+
 # - name: Prep CFDB
 #   hosts: localhost
 #   connection: local
