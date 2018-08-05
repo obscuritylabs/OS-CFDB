@@ -1,0 +1,18 @@
+## other configuration excluded from example...
+exclude_patterns:
+- "lib/foundation.js"
+- "**/*.rb"
+- config/
+- db/
+- dist/
+- features/
+- **/node_modules/
+- script/
+- **/spec/
+- **/test/
+- **/tests/
+- **/vendor/
+- **/*.d.ts
+- **/*.min.js
+- .site/cfdb-app/static/js/
+- .site/cfdb-app/static/static/
