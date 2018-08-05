@@ -1,6 +1,9 @@
 sudo: required
 
-language: python
+os:
+  - linux
+
+#language: python
 
 services:
   - docker
@@ -30,7 +33,7 @@ script:
   - docker-compose version
   - python .convert.py .
   - cd .site && ./build.sh 
-  - docker-compose down && cd ansible-aws-ec2
+  - cd ansible-aws-ec2
 
 deploy:
   # teardown old infrustructure

@@ -21,6 +21,7 @@ Currently the stack makes use of the latest version's of:
 
 
 ### Deploy to AWS
+Deploying to AWS requires a few steps to properly configure your enviroment. A list of required packages can be easily found in the `.travis.yml` file. We have tested the deployment for MacOS and Ubuntu and is daily executed via a simple CI pipeline. This builds from master on any push and a Travis CI Cron job, it includes a full docker enviroment + AWS configuration with a fresh configuration!
 
 Setup ENV vars for the ansible Playbook (**these are required**)
 ```
