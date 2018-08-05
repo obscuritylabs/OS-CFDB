@@ -28,7 +28,7 @@ script:
   - docker version
   - docker-compose version
   - python .convert.py .
-  - cd .site && ./build.sh
+  - cd .site && ./build.sh && cd ..
   - docker-compose down
 
 deploy:
