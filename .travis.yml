@@ -23,9 +23,6 @@ before_install:
   - sudo pip install --upgrade pip
   
 install:
-  - sudo pip install coveralls
-  - sudo pip install coverage
-  - sudo pip install nose
   - sudo pip install boto3 
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
