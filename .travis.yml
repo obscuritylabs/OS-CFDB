@@ -4,6 +4,7 @@ os:
   - linux
 
 dist: xenial
+
 #language: python
 
 services:
@@ -11,22 +12,17 @@ services:
 
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update
-  - sudo apt-get -y install docker-ce
-  - curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose
-  - chmod +x docker-compose && sudo mv docker-compose /bin/
-  - sudo apt-get -y install software-properties-common
-  - sudo apt-add-repository -y ppa:ansible/ansible && sudo apt-get update
-  - sudo apt-get -y install ansible 
+  - curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+  # - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update && sudo apt-get -y install docker-ce
+  - curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose && chmod +x docker-compose && sudo mv docker-compose /bin/
   - sudo pip install --upgrade pip
   
 install:
   - sudo pip install boto3 
+  - sudo pip install ansible
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
 script:
-  - docker version
-  - docker-compose version
   - python .convert.py .
   - cd .site && ./build.sh 
   - cd ansible-aws-ec2
