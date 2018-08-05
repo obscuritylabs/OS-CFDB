@@ -71,12 +71,12 @@
         stack: "{{cfdb_stack_tag}}"
     register: vpc_rtbl_results
 
-  - name: create key pair using key_material obtained using 'file' lookup plugin
-    ec2_key:
-      name: "{{key_name}}"
-      region: "{{aws_region}}"
-      key_material: "{{item}}"
-    with_file: "{{key_path}}"
+  # - name: create key pair using key_material obtained using 'file' lookup plugin
+  #   ec2_key:
+  #     name: "{{key_name}}"
+  #     region: "{{aws_region}}"
+  #     key_material: "{{item}}"
+  #   with_file: "{{key_path}}"
 
   - name: Create AWS webstack security group
     ec2_group:
