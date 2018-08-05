@@ -1,0 +1,4 @@
+# from galaxy
+- src: geerlingguy.git 
+- src: geerlingguy.docker 
+- src: franklinkim.docker-compose 
