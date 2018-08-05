@@ -28,8 +28,8 @@ script:
   - docker version
   - docker-compose version
   - python .convert.py .
-  - cd .site && ./build.sh && cd ..
-  - docker-compose down
+  - cd .site && ./build.sh 
+  - docker-compose down && cd ..
 
 deploy:
   # teardown old infrustructure
