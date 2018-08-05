@@ -34,6 +34,7 @@ script:
 
 deploy:
   # teardown old infrustructure
+  skip_cleanup: true
   - provider: script
     script: bash teardown.sh
     on:
