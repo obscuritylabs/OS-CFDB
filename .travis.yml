@@ -25,10 +25,11 @@ install:
   - pip install nose
   
 script:
-    - docker version
-    - docker-compose version
-    - python .convert.py .
-    - cd .site && ./build.sh
+  - docker version
+  - docker-compose version
+  - python .convert.py .
+  - cd .site && ./build.sh
+  - docker-compose down
 
 deploy:
   # teardown old infrustructure
