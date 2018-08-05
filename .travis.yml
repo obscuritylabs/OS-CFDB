@@ -18,8 +18,11 @@ before_install:
   - sudo pip install --upgrade pip
   
 install:
+  # required for AWS 
   - sudo pip install boto3 
+  # required for production deployment
   - sudo pip install ansible
+  # required for AWS images
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
 script:

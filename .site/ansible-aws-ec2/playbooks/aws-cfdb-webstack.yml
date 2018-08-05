@@ -46,14 +46,14 @@
         stack: "{{cfdb_stack_tag}}"
     register: vpc_igw_results
 
-  # - name: Locate current VPC route table ID
-  #   ec2_vpc_route_table_facts:
-  #     aws_access_key: "{{aws_access_key}}"
-  #     aws_secret_key: "{{aws_secret_key}}"
-  #     region: "{{aws_region}}"
-  #     filters:
-  #       vpc-id: "{{vpc_results.vpc.id}}"
-  #   register: vpc_rtbl_facts
+  - name: Locate current VPC route table ID
+    ec2_vpc_route_table_facts:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      region: "{{aws_region}}"
+      filters:
+        vpc-id: "{{vpc_results.vpc.id}}"
+    register: vpc_rtbl_facts
 
   - name: Create AWS VPC Route Table
     ec2_vpc_route_table:
