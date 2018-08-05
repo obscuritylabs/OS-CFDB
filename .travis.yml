@@ -34,13 +34,14 @@ script:
 
 deploy:
   # teardown old infrustructure
-  skip_cleanup: true
   - provider: script
+    skip_cleanup: true
     script: bash teardown.sh
     on:
       branch: master
   # deploy master to production
   - provider: script
+    skip_cleanup: true
     script: bash deploy.sh
     on:
       branch:  master
