@@ -12,7 +12,7 @@ services:
 
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+  # - curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
   # - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update && sudo apt-get -y install docker-ce
   - curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose && chmod +x docker-compose && sudo mv docker-compose /bin/
   - sudo pip install --upgrade pip
@@ -23,8 +23,11 @@ install:
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
 script:
+  # test JSON format of OS-CFDB repo
   - python .convert.py .
+  # test docker-compose configuration and build
   - cd .site && ./build.sh 
+  # prep to push full repo to AWS production
   - cd ansible-aws-ec2
 
 deploy:
