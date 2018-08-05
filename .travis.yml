@@ -13,13 +13,10 @@ before_install:
   - sudo add-apt-repository -y ppa:jonathonf/python-2.7 && sudo apt-get update
   - sudo apt-get -y install python2.7 && python --version
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  - sudo apt-get update
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update
   - sudo apt-get -y install docker-ce
   - curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /bin/
-  - sudo apt-get update
+  - chmod +x docker-compose && sudo mv docker-compose /bin/
   - sudo apt-get -y install software-properties-common
   - sudo apt-add-repository -y ppa:ansible/ansible && sudo apt-get update
   - sudo apt-get -y install ansible 
