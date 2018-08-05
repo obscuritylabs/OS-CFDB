@@ -13,6 +13,9 @@ services:
 before_install:
   - openssl aes-256-cbc -K $encrypted_3dbdf0a5463a_key -iv $encrypted_3dbdf0a5463a_iv 
     -in AWS-AMI.pem.enc -out ./AWS-AMI.pem -d 
+  - eval "$(ssh-agent -s)"
+  - chmod 600 ./AWS-AMI.pem
+  - ssh-add ./AWS-AMI.pem
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   # - curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
   # - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update && sudo apt-get -y install docker-ce
