@@ -12,6 +12,8 @@
     aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
     cloudflare_account_email: "{{ lookup('env','cloudflare_account_email') }}"
     cloudflare_api_token: "{{ lookup('env','cloudflare_api_token') }}"
+    # TODO: hide public IP data with env vaiable and ans no_log feature
+    # travis_build: "{{ lookup('env','travis_build') }}"
   tasks:
   - name: Create AWS VPC 
     ec2_vpc_net:
