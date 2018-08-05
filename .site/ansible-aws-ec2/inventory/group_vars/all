@@ -1,7 +1,7 @@
 aws_region: us-east-1
 ami_id: ami-759bc50a 
 key_name: AWS-PEM
-key_path: ~/.ssh/id_rsa.pub
+# key_path: ~/.ssh/id_rsa.pub
 
 cfdb_stack_tag: cfdb
 cfdb_webstack_name: cfdb_stack
