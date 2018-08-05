@@ -1,1 +1,119 @@
+---
+- name: Terminate OS-CFDB AWS resources
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    aws_access_key: "{{ lookup('env','aws_access_key') }}"
+    aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
+    cloudflare_account_email: "{{ lookup('env','cloudflare_account_email') }}"
+    cloudflare_api_token: "{{ lookup('env','cloudflare_api_token') }}"
+  tasks:
+    - name: Remove Cloudflare Record
+      cloudflare_dns:
+        zone: obscuritylabs.com
+        record: os-cfdb
+        type: A
+        state: absent
+        account_email: "{{cloudflare_account_email}}"
+        account_api_token: "{{cloudflare_api_token}}"
 
+    - name: Locate cfdb EC2 WebStack Instance
+      ec2_instance_facts:
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        region: "{{aws_region}}"
+        filters:
+          "tag:stack": "{{cfdb_stack_tag}}"
+      register: ec2
+
+    - name: cfdb EC2 WebStack Terminate
+      ec2:
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        region: "{{aws_region}}"
+        state: absent
+        instance_ids: "{{ item.instance_id }}"
+      with_items: "{{ ec2.instances }}"
+
+    - name: sleep for 30 seconds
+      pause:
+        seconds: 30
+
+    - name: Locate cfdb EC2 WebStack VPC
+      ec2_vpc_net_facts:
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        region: "{{aws_region}}"
+        filters:
+          "tag:stack": "{{cfdb_stack_tag}}"
+      register: cfdb_vpc
+
+    - name: cfdb EC2 WebStack VPC IGW Terminate
+      ec2_vpc_igw:
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        vpc_id: "{{item.vpc_id}}"
+        region: "{{aws_region}}"
+        state: absent
+      with_items: "{{ cfdb_vpc.vpcs }}"
+
+    # - name: Locate cfdb EC2 WebStack VPC EC2 SEC Groups ID
+    #   ec2_group_facts:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     region: "{{aws_region}}"
+    #     filters:
+    #       vpc-id: "{{cfdb_vpc.vpcs[0].vpc_id}}"
+    #   register: cfdb_vpc_sec_group
+
+    # - name: cfdb EC2 WebStack VPC SEC Group Terminate
+    #   ec2_group:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     vpc_id: "{{item.vpc_id}}"
+    #     region: "{{aws_region}}"
+    #     group_id: "{{item.group_id}}"
+    #     state: absent
+    #   with_items: "{{ cfdb_vpc_sec_group.security_groups }}"
+
+    # - name: cfdb EC2 WebStack VPC Subnet Terminate
+    #   ec2_vpc_subnet:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     vpc_id: "{{item.vpc_id}}"
+    #     cidr: "{{cfdb_webstack_vpc_cidr}}"
+    #     region: "{{aws_region}}"
+    #     state: absent
+    #   with_items: "{{ cfdb_vpc.vpcs }}"
+
+    # - name: Locate cfdb EC2 WebStack VPC RTBL ID
+    #   ec2_vpc_route_table_facts:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     region: "{{aws_region}}"
+    #     filters:
+    #       # "tag:stack": "{{cfdb_stack_tag}}"
+    #       vpc-id: "{{cfdb_vpc.vpcs[0].vpc_id}}"
+    #   register: cfdb_vpc_rtbl
+
+    # - name: cfdb EC2 WebStack VPC RTBL Terminate
+    #   ec2_vpc_route_table:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     vpc_id: "{{item.vpc_id}}"
+    #     route_table_id: "{{item.id}}"
+    #     lookup: id
+    #     region: "{{aws_region}}"
+    #     state: absent
+    #   with_items: "{{ cfdb_vpc_rtbl.route_tables }}"
+
+    # - name: cfdb EC2 WebStack VPC Terminate
+    #   ec2_vpc_net:
+    #     aws_access_key: "{{aws_access_key}}"
+    #     aws_secret_key: "{{aws_secret_key}}"
+    #     name: "{{cfdb_webstack_vpc_name}}"
+    #     cidr_block: "{{cfdb_webstack_vpc_cidr}}"
+    #     region: "{{aws_region}}"
+    #     state: absent
+    #   with_items: "{{ cfdb_vpc.vpcs }}"

@@ -1,0 +1,256 @@
+---
+# Basic provisioning:
+#   Builds Redis server for light house in AWS using 
+#   private IP and set of ansible galaxy roles.
+
+- name: Create AWS resources
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    aws_access_key: "{{ lookup('env','aws_access_key') }}"
+    aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
+    cloudflare_account_email: "{{ lookup('env','cloudflare_account_email') }}"
+    cloudflare_api_token: "{{ lookup('env','cloudflare_api_token') }}"
+  tasks:
+  - name: Create AWS VPC 
+    ec2_vpc_net:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      name: "{{cfdb_webstack_vpc_name}}"
+      cidr_block: "{{cfdb_webstack_vpc_cidr}}"
+      region: "{{aws_region}}"
+      tags:
+        stack: "{{cfdb_stack_tag}}"
+    register: vpc_results
+
+  - name: Create AWS VPC Subnet
+    ec2_vpc_subnet:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      region: "{{aws_region}}"
+      vpc_id: "{{vpc_results.vpc.id}}"
+      cidr: "{{cfdb_webstack_vpc_cidr}}"
+      resource_tags:
+        stack: "{{cfdb_stack_tag}}"
+    register: vpc_subnet_results
+
+  - name: Create AWS VPC IGW
+    ec2_vpc_igw:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      region: "{{aws_region}}"
+      vpc_id: "{{vpc_results.vpc.id}}"
+      state: present
+      resource_tags:
+        stack: "{{cfdb_stack_tag}}"
+    register: vpc_igw_results
+
+  - name: Locate current VPC route table ID
+    ec2_vpc_route_table_facts:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      region: "{{aws_region}}"
+      filters:
+        vpc-id: "{{vpc_results.vpc.id}}"
+    register: vpc_rtbl_facts
+
+  - name: Create AWS VPC Route Table
+    ec2_vpc_route_table:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      route_table_id: "{{vpc_rtbl_facts.route_tables[0].id}}"
+      region: "{{aws_region}}"
+      vpc_id: "{{vpc_results.vpc.id}}"
+      subnets:
+        - "{{vpc_subnet_results.subnet.id}}"
+      routes:
+        - dest: 0.0.0.0/0
+          gateway_id: "{{vpc_igw_results.gateway_id}}"
+      resource_tags:
+        stack: "{{cfdb_stack_tag}}"
+    register: vpc_rtbl_results
+
+  - name: create key pair using key_material obtained using 'file' lookup plugin
+    ec2_key:
+      name: "{{key_name}}"
+      region: "{{aws_region}}"
+      key_material: "{{item}}"
+    with_file: "{{key_path}}"
+
+  - name: Create AWS webstack security group
+    ec2_group:
+      name: cfdb_default
+      description: "cfdb security group"
+      region: "{{aws_region}}"
+      vpc_id: "{{vpc_results.vpc.id}}"
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      rules:
+        - proto: all
+          cidr_ip: "{{cfdb_webstack_vpc_cidr}}"
+        - proto: tcp
+          from_port: 22
+          to_port: 22
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 443
+          to_port: 443
+          cidr_ip: 0.0.0.0/0
+        - proto: all
+          group_name: cfdb_default
+      rules_egress:
+        - proto: all
+          cidr_ip: 0.0.0.0/0
+      tags:
+        stack: "{{cfdb_stack_tag}}"
+    register: results
+
+  - name: CFDB EC2 Instance
+    ec2:
+      aws_access_key: "{{aws_access_key}}"
+      aws_secret_key: "{{aws_secret_key}}"
+      key_name: "{{key_name}}"
+      region: "{{aws_region}}"
+      vpc_subnet_id: "{{vpc_subnet_results.subnet.id}}"
+      group_id: "{{results.group_id}}"
+      instance_type: "{{cfdb_webstack_instance_type}}"
+      image: "{{ami_id}}"
+      private_ip: "{{cfdb_webstack_ip}}"
+      assign_public_ip: true
+      wait: yes
+      volumes:
+        - device_name: /dev/sda1
+          volume_type: gp2
+          volume_size: 10
+          delete_on_termination: true
+      exact_count: "{{cfdb_stack_count}}"
+      count_tag:
+         name: "{{cfdb_webstack_name}}"
+      instance_tags: 
+         Name: "{{cfdb_webstack_name}}"
+         stack: "{{cfdb_stack_tag}}"
+    register: ec2
+
+  - name: Add new instance to host group
+    add_host:
+      hostname: "{{item.public_ip}}"
+      groupname: launched
+    with_items: "{{ec2.instances}}"
+
+  - name: sleep for 5 seconds
+    pause:
+      seconds: 5
+
+  - name: Wait for SSH to come up
+    remote_user: ubuntu
+    wait_for:
+      host: "{{item.public_dns_name}}"
+      port: 22
+      delay: 0
+      timeout: 320
+      state: started
+    with_items: "{{ec2.instances}}"
+
+  - name: Create Cloudflare Record
+    cloudflare_dns:
+      zone: obscuritylabs.com
+      record: os-cfdb
+      proxied: yes
+      type: A
+      value: "{{item.public_ip}}"
+      account_email: "{{cloudflare_account_email}}"
+      account_api_token: "{{cloudflare_api_token}}"
+    with_items: "{{ec2.instances}}"
+
+- name: Install ansible bootstrap
+  hosts: launched
+  become: True
+  gather_facts: False
+  tasks:
+  - name: Install python 2
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+- name: Update instance(s)
+  hosts: launched
+  become: True
+  gather_facts: True
+  tasks:
+    - name: Run the equivalent of "apt-get update" 
+      apt:
+        update_cache: yes
+    - name: Update all packages to the latest version
+      apt:
+        upgrade: full
+    - name: Update all packages to the latest version
+      apt:
+        name: python-pip
+        state: present
+    - name: Install UFW
+      apt:
+        name: ufw
+        state: present 
+
+- name: Configure instance(s)
+  hosts: launched
+  become: True
+  gather_facts: True
+  roles:
+    - role: geerlingguy.git 
+    - role: geerlingguy.docker 
+    - role: franklinkim.docker-compose
+
+- name: Install pip packages
+  hosts: launched
+  become: True
+  gather_facts: True
+  tasks:
+    - pip:
+        name: docker
+
+- name: Prep CFDB
+  hosts: launched
+  become: True
+  gather_facts: True
+  tasks:
+    - name: git os-cfdb
+      git:
+        repo: 'https://github.com/obscuritylabs/OS-CFDB.git'
+        dest: "{{cfdb_install_dir}}"
+
+- name: Prep CFDB
+  hosts: launched
+  become: True
+  gather_facts: True
+  tasks:
+    - docker_service:
+        project_src: "{{cfdb_install_dir}}{{cfdb_docker_compose_dir}}"
+
+# - name: Prep CFDB
+#   hosts: localhost
+#   connection: local
+#   gather_facts: False
+#   vars:
+#     aws_access_key: "{{ lookup('env','aws_access_key') }}"
+#     aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
+#   tasks:
+#     - name: Locate cfdb EC2 WebStack Instance
+#       ec2_instance_facts:
+#         aws_access_key: "{{aws_access_key}}"
+#         aws_secret_key: "{{aws_secret_key}}"
+#         region: "{{aws_region}}"
+#         filters:
+#           "tag:stack": "{{cfdb_stack_tag}}"
+#       register: ec2
+
+#     - name: Set elastic IP
+#       ec2_eip:
+#         region: "{{aws_region}}"
+#         device_id: "{{item.instance_id}}"
+#         ip: "{{cfdb_elastic_ip}}"
+#       with_items: "{{ec2.instances}}"
+

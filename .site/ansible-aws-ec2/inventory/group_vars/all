@@ -1,1 +1,18 @@
+aws_region: us-east-1
+ami_id: ami-759bc50a 
+key_name: AWS-PEM
+key_path: ~/.ssh/id_rsa.pub
+
+cfdb_stack_tag: cfdb
+cfdb_webstack_name: cfdb_stack
+cfdb_webstack_instance_type: t2.nano
+cfdb_stack_count: 1
+
+cfdb_webstack_vpc_name: cfdb_vpc
+cfdb_webstack_vpc_cidr: 10.0.0.0/16
+cfdb_webstack_ip: 10.0.0.10
+cfdb_elastic_ip: 18.210.159.130
+
+cfdb_install_dir: /opt/os-cfdb/
+cfdb_docker_compose_dir: .site/
 

@@ -29,3 +29,15 @@ script:
     - docker-compose version
     - python .convert.py .
     - cd .site && ./build.sh
+
+deploy:
+  # teardown old infrustructure
+  - provider: script
+    script: bash .site/ansible-aws-ec2/teardown.sh
+    on:
+      branch: master
+  # deploy master to production
+  - provider: script
+    script: bash .site/ansible-aws-ec2/deploy.sh
+    on:
+      branch:  master
