@@ -29,7 +29,7 @@ install:
   - sudo pip install coverage
   - sudo pip install nose
   - sudo pip install boto3 
-  - sudo pip install pyasn1
+  - sudo pip install -U urllib3[secure]
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
 script:
