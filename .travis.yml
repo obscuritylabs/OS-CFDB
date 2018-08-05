@@ -10,6 +10,9 @@ services:
   - docker
 
 before_install:
+  - sudo add-apt-repository ppa:jonathonf/python-2.7
+  - sudo apt-get update
+  - sudo apt-get install python2.7 && python --version
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
@@ -29,7 +32,6 @@ install:
   - sudo pip install coverage
   - sudo pip install nose
   - sudo pip install boto3 
-  - sudo pip install -U urllib3[secure]
   - sudo ansible-galaxy install -r .site/ansible-aws-ec2/requirements.yml
   
 script:
