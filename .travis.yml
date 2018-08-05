@@ -3,6 +3,7 @@ sudo: required
 os:
   - linux
 
+dist: trusty
 #language: python
 
 services:
@@ -21,12 +22,13 @@ before_install:
   - sudo apt-add-repository -y ppa:ansible/ansible
   - sudo apt-get update
   - sudo apt-get -y install ansible 
+  - pip install --upgrade pip
   
 install:
-  - pip install coveralls
-  - pip install coverage
-  - pip install nose
-  - pip install boto3 
+  - sudo pip install coveralls
+  - sudo pip install coverage
+  - sudo pip install nose
+  - sudo pip install boto3 
   
 script:
   - docker version
