@@ -16,11 +16,11 @@ before_install:
   - eval "$(ssh-agent -s)"
   - chmod 600 ./AWS-AMI.pem
   - ssh-add ./AWS-AMI.pem
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   # - curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+  # - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   # - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt-get update && sudo apt-get -y install docker-ce
   - curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose && chmod +x docker-compose && sudo mv docker-compose /bin/
-  - sudo pip install --upgrade pip
+  # - sudo pip install --upgrade pip
   
 install:
   # required for AWS 
