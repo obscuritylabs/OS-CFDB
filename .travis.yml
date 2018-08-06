@@ -45,15 +45,18 @@ deploy:
   # teardown old infrustructure
   - provider: script
     skip_cleanup: true
-    script: 
-     - sudo bash teardown.sh
+    script: sudo bash teardown.sh
     on:
       branch: master
   # deploy master to production
   - provider: script
     skip_cleanup: true
-    script: 
-     - sudo bash deploy.sh
-     - travisqueue finish
+    script: sudo bash deploy.sh
+    on:
+      branch:  master
+  #  cleanup build states
+  - provider: script
+    skip_cleanup: true
+    script: travisqueue finish
     on:
       branch:  master
