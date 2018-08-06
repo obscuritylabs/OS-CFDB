@@ -44,18 +44,16 @@ def make_cache_key(*args, **kwargs): return request.url
 
 @app.errorhandler(429)
 def ratelimit_handler(e):
-    """[summary]
-
-    [description]
+    """Overide the default http 429 code error.
 
     Decorators:
         app.errorhandler
 
     Arguments:
-        e {[type]} -- [description]
+        e {string} -- error of 429.
 
     Returns:
-        [type] -- [description]
+        json -- ratelimit exceeded
     """
     return make_response(
         jsonify(error="ratelimit exceeded %s" % e.description), 429
@@ -64,7 +62,7 @@ def ratelimit_handler(e):
 
 @app.errorhandler(404)
 def ratelimit_handler(e):
-    """[summary]
+    """Overide the default http 404 code error.
 
     [description]
 
@@ -72,10 +70,10 @@ def ratelimit_handler(e):
         app.errorhandler
 
     Arguments:
-        e {[type]} -- [description]
+        e {string} -- error of 404.
 
     Returns:
-        [type] -- [description]
+        json -- url_unkown
     """
     return make_response(
         jsonify({'error': {
@@ -89,18 +87,16 @@ def ratelimit_handler(e):
 
 @app.errorhandler(500)
 def crit_error_handler(e):
-    """[summary]
-
-    [description]
+    """Overide the default http 500 code error.
 
     Decorators:
         app.errorhandler
 
     Arguments:
-        e {[type]} -- [description]
+        e {string} -- error of 500.
 
     Returns:
-        [type] -- [description]
+        json -- server_error
     """
     return make_response(
         jsonify({'error': {
