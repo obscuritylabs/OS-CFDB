@@ -216,10 +216,10 @@ def search_finding_title():
         abort(500)
 
 
-@app.route('/%s/retrive/finding/id/<string:f_id>' % (__API_VERSION), methods=['GET'])
-@cache.cached(timeout=60)
+@app.route('/%s/retrive/finding/id' % (__API_VERSION), methods=['GET'])
+@cache.cached(timeout=60, key_prefix=make_cache_key)
 @limiter.limit("60/minute")
-def get_finding(f_id):
+def get_finding():
     """Retrive findings by ID.
 
     Uses pymonogo to retrive by finding ID.
@@ -239,6 +239,7 @@ def get_finding(f_id):
         [type] -- [description]
     """
     try:
+        f_id = str(request.args.get('id'))
         document = db.findings.find_one(
             {'finding.findingDetails.findingMatrix.id': f_id}, {'_id': False})
         if not document:
