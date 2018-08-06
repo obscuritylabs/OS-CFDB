@@ -15,4 +15,5 @@ exclude_patterns:
 - "**/*.d.ts"
 - "**/*.min.js"
 - ".site/cfdb-app/static/js/"
-- ".site/cfdb-app/static/static/"
+- ".site/cfdb-app/static/img/"
+- ".site/cfdb-app/static/css/"
