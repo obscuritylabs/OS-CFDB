@@ -57,7 +57,6 @@ The data within this project is broken out into multiple headers and lists; this
 - Service - Descriptor of how a finding denoted identification 
 - NIST 800-53 - Specific correlating controls to finding
 - MITRE ATT&CK - Linked tactics that may relate to the finding for further risk analysis
-
 - References - Curated list of sources that should be used during reporting
 
 ### Technical Information
