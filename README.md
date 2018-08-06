@@ -78,7 +78,6 @@ The data within this project is broken out into multiple headers and lists; this
 -- **CURRENTLY UNDER DEVLOPMENT** 
 - MD - MarkDown is a way to display structured text and allow readers to view the findings quickly.
 
-
 ## Finding Classification and Scoring
 
 Each finding is provided a **Default** Vulnerability Severity Rating (VSR) & a correlated Common Vulnerability Scoring System (CVSS) identifier. 
