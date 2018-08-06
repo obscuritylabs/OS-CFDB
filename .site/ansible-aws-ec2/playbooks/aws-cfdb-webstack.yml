@@ -139,6 +139,7 @@
     register: ec2
 
   - name: Add new instance to host group
+    no_log: true
     add_host:
       hostname: "{{item.public_ip}}"
       groupname: launched
@@ -150,6 +151,7 @@
 
   - name: Wait for SSH to come up
     remote_user: ubuntu
+    no_log: true
     wait_for:
       host: "{{item.public_dns_name}}"
       port: 22
@@ -159,6 +161,7 @@
     with_items: "{{ec2.instances}}"
 
   - name: Create Cloudflare Record
+    no_log: true
     cloudflare_dns:
       zone: obscuritylabs.com
       record: os-cfdb
@@ -173,6 +176,7 @@
   hosts: launched
   become: True
   gather_facts: False
+  no_log: true
   tasks:
   - name: Install python 2
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
@@ -181,6 +185,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   tasks:
     - name: Run the equivalent of "apt-get update" 
       apt:
@@ -201,6 +206,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   roles:
     - role: geerlingguy.git 
     - role: geerlingguy.docker 
@@ -210,6 +216,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   tasks:
     - pip:
         name: docker
@@ -218,6 +225,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   tasks:
     - name: git os-cfdb
       git:
@@ -228,6 +236,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   tasks:
     - docker_service:
         project_src: "{{cfdb_install_dir}}{{cfdb_docker_compose_dir}}"
@@ -236,6 +245,7 @@
   hosts: launched
   become: True
   gather_facts: True
+  no_log: true
   tasks:
     - command: docker exec -t site_cfdb-api_1 git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
     - command: docker exec -t site_cfdb-api_1 python /root/cfdb-api/init_mongo.py /root/OS-CFDB/
