@@ -5,8 +5,9 @@ os:
 
 dist: xenial
 
-#language: python
-
+language: 
+  - go
+  
 services:
   - docker
 
