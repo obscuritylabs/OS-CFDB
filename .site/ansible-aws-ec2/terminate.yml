@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: False
+  no_log: true
   vars:
     aws_access_key: "{{ lookup('env','aws_access_key') }}"
     aws_secret_key: "{{ lookup('env','aws_secret_key') }}"
@@ -10,6 +11,7 @@
     cloudflare_api_token: "{{ lookup('env','cloudflare_api_token') }}"
   tasks:
     - name: Remove Cloudflare Record
+      no_log: true
       cloudflare_dns:
         zone: obscuritylabs.com
         record: os-cfdb
@@ -19,6 +21,7 @@
         account_api_token: "{{cloudflare_api_token}}"
 
     - name: Locate cfdb EC2 WebStack Instance
+      no_log: true
       ec2_instance_facts:
         aws_access_key: "{{aws_access_key}}"
         aws_secret_key: "{{aws_secret_key}}"
@@ -28,6 +31,7 @@
       register: ec2
 
     - name: cfdb EC2 WebStack Terminate
+      no_log: true
       ec2:
         aws_access_key: "{{aws_access_key}}"
         aws_secret_key: "{{aws_secret_key}}"
@@ -41,6 +45,7 @@
         seconds: 30
 
     - name: Locate cfdb EC2 WebStack VPC
+      no_log: true
       ec2_vpc_net_facts:
         aws_access_key: "{{aws_access_key}}"
         aws_secret_key: "{{aws_secret_key}}"
@@ -50,6 +55,7 @@
       register: cfdb_vpc
 
     - name: cfdb EC2 WebStack VPC IGW Terminate
+      no_log: true
       ec2_vpc_igw:
         aws_access_key: "{{aws_access_key}}"
         aws_secret_key: "{{aws_secret_key}}"
