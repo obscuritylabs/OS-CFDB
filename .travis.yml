@@ -5,6 +5,7 @@ os:
 
 dist: xenial
 
+language: go
 #language: python
 
 services:
