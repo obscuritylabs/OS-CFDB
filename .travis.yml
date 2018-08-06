@@ -13,6 +13,7 @@ services:
 
 before_install:
   - go get github.com/pulumi/travisqueue
+  - travisqueue start
   - openssl aes-256-cbc -K $encrypted_3dbdf0a5463a_key -iv $encrypted_3dbdf0a5463a_iv 
     -in AWS-AMI.pem.enc -out ./AWS-AMI.pem -d 
   - eval "$(ssh-agent -s)"
@@ -44,12 +45,15 @@ deploy:
   # teardown old infrustructure
   - provider: script
     skip_cleanup: true
-    script: sudo bash teardown.sh
+    script: 
+     - sudo bash teardown.sh
     on:
       branch: master
   # deploy master to production
   - provider: script
     skip_cleanup: true
-    script: sudo bash deploy.sh
+    script: 
+     - sudo bash deploy.sh
+     - travisqueue finish
     on:
       branch:  master
