@@ -207,8 +207,8 @@ def search_finding_title():
     try:
         temp = []
         f_title = '^' + str(request.args.get('title'))
-        cursor = db.findings.find({"finding.Finding Details.Finding Matrix.Title": {
-                                  "$regex": f_title}}, {"_id": True, 'finding.Finding Details.Finding Matrix': True}).limit(10)
+        cursor = db.findings.find({"finding.findingDetails.findingMatrix.title": {
+                                  "$regex": f_title}}, {"_id": True, 'finding.findingDetails.findingMatrix': True}).limit(10)
         for x in cursor:
             temp.append({'id': str(x['_id']), 'data': x['finding']})
         return make_response(jsonify(temp), 200)
@@ -240,7 +240,7 @@ def get_finding(f_id):
     """
     try:
         document = db.findings.find_one(
-            {'finding.Finding Details.Finding Matrix.ID': f_id}, {'_id': False})
+            {'finding.findingDetails.findingMatrix.id': f_id}, {'_id': False})
         if not document:
             return make_response(jsonify({"data": {}}), 200)
         return make_response(jsonify({"data": document}), 200)
