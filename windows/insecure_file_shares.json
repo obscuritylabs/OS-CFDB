@@ -1,0 +1,68 @@
+{
+  "finding": {
+    "findingDetails": {
+      "findingMatrix":
+        {
+          "title": "Insecure File Shares",
+          "vsr": 3,
+          "cvss": "4.0-5.9",
+          "risk": "Medium",
+          "id": "OS-CFDB-1005"
+        },
+      "findingService": [
+        {
+          "service": "Internal Penetration Testing"
+        },
+        {
+          "service": "External Penetration Testing"
+        }
+      ],
+      "nistControls" : [
+        {
+          "nist": "SI-2"
+        },
+        {
+          "nist": "AC-1"
+        },
+        {
+          "nist": "AC-3"
+        },
+        {
+          "nist": "AC-6"
+        }
+      ],
+      "mitreAttack" : [
+        {
+          "name": "Network Share Discovery",
+          "tactic": "Discovery",
+          "id": "T1135",
+          "link": "https://attack.mitre.org/wiki/Technique/T1135"
+        }  
+      ],
+      "findingRefrences": [
+        {
+          "url": "https://technet.microsoft.com/en-us/library/cc754178(v=ws.11).aspx"
+        },
+        {
+          "url": "https://technet.microsoft.com/en-us/library/cc772184(v=ws.11).aspx"
+        }
+      ]
+    },
+    "technicalInformation": {
+      "description": "Windows File Shares using NTFS (New Technology File System) allows for granular control over RWX (Read, Write, Execute) down to specific files. Sensitive data related to business functions and personnel often are stored in centralized locations for ease of access. When non-elevated / privileged domain users can access sensitive data, it allows for an attacker to easily exfil or facilitate future attack paths.",
+      "impact": "This insecure storage misconfiguration leaves data open to theft by an attacker and could cause substantial damage to the organization and its employees. Insecure file shares can also lead to loss of data integrity and malicious code to target HVI (High-Value Individuals)",
+      "recommendation": "The assessment team recommends following the model of least privileged. Implement a secure configuration by using NTFS Share Permissions and restricting Domain Users and Groups to sensitive data."
+    },
+    "findingMetadata": {
+      "findingdDevelopment": [
+        {
+          "authorName": "Alexander Rymdeko-Harvey",
+          "twitterHandle": "@Killswitch-GUI",
+          "email": "",
+          "created": "09/27/2017",
+          "updated": "09/27/2017"
+        }
+      ]
+    }
+  }
+}
