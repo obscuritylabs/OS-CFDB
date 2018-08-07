@@ -1,0 +1,62 @@
+{
+  "finding": {
+    "findingDetails": {
+      "findingMatrix":
+        {
+          "title": "Inadequate Network Segmentation",
+          "vsr": 4,
+          "cvss": "6.0 – 7.9",
+          "risk": "High",
+          "id": "OS-CFDB-1003"
+        },
+      "findingService": [
+        {
+          "service": "Internal Penetration Testing"
+        },
+        {
+          "service": "External Penetration Testing"
+        }
+      ],
+      "nistControls" : [
+        {
+          "nist": "SC-32"
+        },
+        {
+          "nist": "SC-7"
+        }
+      ],
+      "mitreAttack" : [
+        {
+          "name": "Exfiltration Over Command and Control Channel",
+          "tactic": "Exfiltration",
+          "id": "T1041",
+          "link": "https://attack.mitre.org/wiki/Technique/T1041"
+        }  
+      ],
+      "findingRefrences": [
+        {
+          "url": "https://www.cisco.com/c/en/us/about/security-center/framework-segmentation.html"
+        },
+        {
+          "url": "https://www.sans.org/reading-room/whitepapers/bestprac/infrastructure-security-architecture-effective-security-monitoring-36512"
+        }
+      ]
+    },
+    "technicalInformation": {
+      "description": "The assessment team discovered that portions of the network have inadequate security boundaries. Improper network segmentation can allow unauthorized traffic to reach unattended destinations. This type of network architecture may be suitable for normal operations but lacks the security needed for critical business functions.",
+      "impact": "This ability to move traffic from a low security to a high-security boundary may allow an attacker to escalate privileges or access critical business data. If an attacker can locate firewall misconfigurations or crossing boundaries, they may be able to communicate to high-value targets within a secure enclave.",
+      "recommendation": "Configure internal firewalls and network infrastructure to isolate traffic to areas of the network as necessary. Network segmentation should take into account where more sensitive administrative or operational information resides, and bias toward protection of that data. If this is not possible an audit should be conducted and a risk assessment to determine a functions balance of security and operations."
+    },
+    "findingMetadata": {
+      "findingdDevelopment": [
+        {
+          "authorName": "Alexander Rymdeko-Harvey",
+          "twitterHandle": "@Killswitch-GUI",
+          "email": "os-cfdb@obscuritylabs.com",
+          "created": "09/27/2017",
+          "updated": "09/27/2017"
+        }
+      ]
+    }
+  }
+}
