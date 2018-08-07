@@ -4,8 +4,8 @@
 
 | Branch | Status | 
 | :----: | :----: | 
-| Master | [![Build Status](https://travis-ci.org/obscuritylabs/OS-CFDB.svg?branch=master)](https://travis-ci.org/obscuritylabs/OS-CFDB) [![Maintainability](https://api.codeclimate.com/v1/badges/998293d1861861477d67/maintainability)](https://codeclimate.com/github/obscuritylabs/OS-CFDB/maintainability) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) |
-| Development| [![Build Status](https://travis-ci.org/obscuritylabs/OS-CFDB.svg?branch=development)](https://travis-ci.org/obscuritylabs/OS-CFDB) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) |
+| Master | [![Build Status](https://travis-ci.org/obscuritylabs/OS-CFDB.svg?branch=master)](https://travis-ci.org/obscuritylabs/OS-CFDB) [![Maintainability](https://api.codeclimate.com/v1/badges/998293d1861861477d67/maintainability)](https://codeclimate.com/github/obscuritylabs/OS-CFDB/maintainability) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![HitCount](http://hits.dwyl.io/obscuritylabs/OS-CFDB.svg)](http://hits.dwyl.io/obscuritylabs/OS-CFDB) |
+| Development | [![Build Status](https://travis-ci.org/obscuritylabs/OS-CFDB.svg?branch=development)](https://travis-ci.org/obscuritylabs/OS-CFDB)[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)  [![HitCount](http://hits.dwyl.io/obscuritylabs/OS-CFDB.svg)](http://hits.dwyl.io/obscuritylabs/OS-CFDB)|
 
 
 
