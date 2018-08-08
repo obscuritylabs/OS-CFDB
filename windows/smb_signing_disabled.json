@@ -1,0 +1,74 @@
+{
+  "finding": {
+    "findingDetails": {
+      "findingMatrix":
+        {
+          "title": "SMB Signing Disabled",
+          "vsr": 4,
+          "cvss": "6.0 – 7.9",
+          "risk": "High",
+          "id": "OS-CFDB-1008"
+        },
+      "findingService": [
+        {
+          "service": "Internal Penetration Testing"
+        },
+        {
+          "service": "External Penetration Testing"
+        }
+      ],
+      "nistControls" : [
+        {
+          "nist": "CM-2"
+        },
+        {
+          "nist": "CM-6"
+        },
+        {
+          "nist": "IA-2"
+        },
+        {
+          "nist": "IA-3"
+        }
+      ],
+      "mitreAttack" : [
+        {
+          "name": "Network Sniffing",
+          "tactic": "Credential Access",
+          "id": "T1040",
+          "link": "https://attack.mitre.org/wiki/Technique/T1040"
+        }  
+      ],
+      "findingRefrences": [
+        {
+          "url": "https://pen-testing.sans.org/blog/2013/04/25/smb-relay-demystified-and-ntlmv2-pwnage-with-python"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/help/161372/how-to-enable-smb-signing-in-windows-nt"
+        },
+        {
+          "url": "https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/"
+        },
+        {
+          "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749(v=vs.85).aspx"
+        }
+      ]
+    },
+    "technicalInformation": {
+      "description": "Server Message Block (SMB) is the file protocol most commonly used by Windows. This protocol allows communication for network file sharing or accessing remote resources of a server. SMB singing specifically is supported on all versions of SMB (1,2,3) but only enabled on Domain Controllers by default. This security feature allows the protocol to ensure authenticity at the packet level.",
+      "impact": "If an attacker gains access to the LAN (Local Area Network), it enables the ability to send specially crafted packets using LLMNR (Link-Local Multicast Name Resolution) spoofing to direct network share access queries to the attacker. Using this MITM (Man-In-The-Middle) attack, an attacker can capture NTLM and NTLMv2 (Windows Challenge/Response Protocol) credentials and potentially brute force these to gain access to resources on the network.",
+      "recommendation": "The assessment team recommends that SMB signing enabled via GPO policy or registry for the In-Scope network hosts. If this is not possible due to business constraints, core servers and resources should allow SMB signing to prevent GPO tampering or credential compromise of high-value accounts."
+    },
+    "findingMetadata": {
+      "findingdDevelopment": [
+        {
+          "authorName": "Alexander Rymdeko-Harvey",
+          "twitterHandle": "@Killswitch-GUI",
+          "email": "os-cfdb@obscuritylabs.com",
+          "created": "09/27/2017",
+          "updated": "09/27/2017"
+        }
+      ]
+    }
+  }
+}
