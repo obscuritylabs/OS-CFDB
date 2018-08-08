@@ -1,0 +1,68 @@
+{
+  "finding": {
+    "findingDetails": {
+      "findingMatrix":
+        {
+          "title": "MsCacheV2 Misconfiguration",
+          "vsr": 4,
+          "cvss": "6.0 – 7.9",
+          "risk": "High",
+          "id": "OS-CFDB-1007"
+        },
+      "findingService": [
+        {
+          "service": "Internal Penetration Testing"
+        },
+        {
+          "service": "External Penetration Testing"
+        }
+      ],
+      "nistControls" : [
+        {
+          "nist": "CM-2"
+        },
+        {
+          "nist": "CM-6"
+        },
+        {
+          "nist": "IA-2"
+        },
+        {
+          "nist": "IA-3"
+        }
+      ],
+      "mitreAttack" : [
+        {
+          "name": "Credential Dumping",
+          "tactic": "Credential Access",
+          "id": "T1003",
+          "link": "https://attack.mitre.org/wiki/Technique/T1003"
+        }  
+      ],
+      "findingRefrences": [
+        {
+          "url": "https://technet.microsoft.com/en-us/library/jj852209.aspx"
+        },
+        {
+          "url": "https://webstersprodigy.net/2014/02/03/mscash-hash-primer-for-pentesters/"
+        }
+      ]
+    },
+    "technicalInformation": {
+      "description": "MsCacheV2 is a Microsoft implementation of local password storage for domain users. These credentials are implemented using the registry and the local SAM hive. By default, Windows caches up to 10 credentials locally and removes the oldest credential as they populate to the host. Caching takes place for Interactive Logons (Type 2), Service Logon (Type 5), and Remote Interactive Logons (Type 10).",
+      "impact": "If an attacker can gain elevated system privileges on a compromised host, the attacker could gather MsCacheV2 credentials. These hashes could then be potentially cracked using the PBKDF2 hashing algorithm, which uses the “Username” as the known salt value. Cracked MsCacheV2 credentials could potentially be used for further lateral movement or compromise of internal domain systems.",
+      "recommendation": "The assessment team recommends that MsCacheV2 credential caching is limited to three accounts at any given time. This setting can be adjusted via GPO (Group Policy Objects)."
+    },
+    "findingMetadata": {
+      "findingdDevelopment": [
+        {
+          "authorName": "Alexander Rymdeko-Harvey",
+          "twitterHandle": "Alexander Rymdeko-Harvey",
+          "email": "os-cfdb@obscuritylabs.com",
+          "created": "09/27/2017",
+          "updated": "09/27/2017"
+        }
+      ]
+    }
+  }
+}
