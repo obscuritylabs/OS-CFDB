@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-| Server Information Disclosure  | 1-5  |  0.0-10.0 | Medium-High  |
+| Database Information Disclosure  | 1-5  |  0.0-10.0 | Medium-High  |
 
 ### Finding Service
 | Service  |
@@ -43,9 +43,8 @@
 ### Description 
 The use of software, data, or commands to take advantage of a weakness in an Internet-facing computer system or program in order to cause unintended information disclosures. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL), standard services (like SMB2 or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services. Depending on the flaw being exploited this information could cause critical second and third order effects, such as revealing the type of backend database being used, exposing user information, or even dumping the entire database.
 
-
 ### Impact
-If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, as well as target users accounts.
+If an attacker can gain access to unauthorized data, they effectively can use the gathered data for further attacks against the web application or secondary/backend systems, leak sensitive data, or target users accounts.
 
 ### Recommendation(s)
 The assessment team recommends that thorough testing be conducted on all resources to identify other web applications that are exposing sensitive data. In addition to additional testing, the following are some guidelines to follow so you can make sure that your web applications are well protected against the most obvious information disclosure issues:
@@ -76,3 +75,4 @@ The assessment team recommends that thorough testing be conducted on all resourc
 | https://portswigger.net/kb/issues/00600200_email-addresses-disclosed |
 | https://portswigger.net/kb/issues/00600400_social-security-numbers-disclosed |
 | https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-53r4.pdf |
+
