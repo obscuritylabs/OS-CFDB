@@ -5,7 +5,7 @@
         {
           "title": "SMB Signing Disabled",
           "vsr": 4,
-          "cvss": 6.0 – 7.9",
+          "cvss": "6.0 – 7.9",
           "risk": "High",
           "id": "OS-CFDB-1008"
         },
