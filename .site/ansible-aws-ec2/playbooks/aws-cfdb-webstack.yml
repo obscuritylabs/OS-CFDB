@@ -210,7 +210,7 @@
   roles:
     - role: geerlingguy.git 
     - role: geerlingguy.docker 
-    - role: franklinkim.docker-compose
+    - role: weareinteractive.docker_compose
 
 - name: Install pip packages
   hosts: launched
