@@ -12,5 +12,5 @@ rm -rf data/mongo/*
 docker-compose up -d
 
 # init new DB
-docker exec -t site_cfdb-api_1 git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
-docker exec -t site_cfdb-api_1 python /root/cfdb-api/init_mongo.py /root/OS-CFDB/
+docker-compose exec cfdb-api git clone https://github.com/obscuritylabs/OS-CFDB.git /root/OS-CFDB/
+docker-compose exec cfdb-api python /root/cfdb-api/init_mongo.py /root/OS-CFDB/
