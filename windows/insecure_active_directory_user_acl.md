@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk | ID |
 |:-:|:-:|:-:|:-:|:-:|
-| Insecure Active Direcotry User ACLs   |  5 |  8.0 – 10.0 | Critical  | OS-CFDB-1000
+| Insecure Active Directory User ACLs   |  5 |  8.0 – 10.0 | Critical  | OS-CFDB-1000
 
 ### Finding Service
 | Service  |
@@ -17,12 +17,12 @@
 | AC-6  |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 |Credentials in Files| Credential Access | T1081 | https://attack.mitre.org/wiki/Technique/T1081 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 |https://www.blackhat.com/docs/us-17/wednesday/us-17-Robbins-An-ACE-Up-The-Sleeve-Designing-Active-Directory-DACL-Backdoors-wp.pdf  |

@@ -24,12 +24,12 @@
 | CA-7 | 
 | CA-8 |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Exploit Public-Facing Application | Initial Access | T1190 | https://attack.mitre.org/wiki/Technique/T1190 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://attack.mitre.org/wiki/Technique/T1190 |

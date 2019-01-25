@@ -19,12 +19,12 @@
 | AC-3 |
 | AC-6 |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Network Share Discovery | Discovery | T1135 | https://attack.mitre.org/wiki/Technique/T1135 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://technet.microsoft.com/en-us/library/cc754178(v=ws.11).aspx |

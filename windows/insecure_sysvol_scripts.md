@@ -18,12 +18,12 @@
 | IA-7 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Credentials in Files | Credential Access | T1081 | https://attack.mitre.org/wiki/Technique/T1081 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://adsecurity.org/?p=2288 |

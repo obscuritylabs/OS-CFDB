@@ -17,12 +17,12 @@
 | SC-32  |
 | SC-7   |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Exfiltration Over Command and Control Channel | Exfiltration | T1041 | https://attack.mitre.org/wiki/Technique/T1041 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://www.infosecurity-magazine.com/opinions/to-err-is-human-to-automate-divine/ |

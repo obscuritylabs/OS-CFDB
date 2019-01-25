@@ -20,12 +20,12 @@
 | IA-3 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Credential Dumping | Credential Access | T1003 | https://attack.mitre.org/wiki/Technique/T1003 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 |https://technet.microsoft.com/en-us/library/jj852209.aspx |

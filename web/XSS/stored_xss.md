@@ -21,12 +21,12 @@
 | AE-2   |
 | CM-4   |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Exploitation for Client Execution | Execution | T1203 | https://attack.mitre.org/wiki/Technique/T1203 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://nvd.nist.gov/download/800-53/800-53-controls.xml |

@@ -20,12 +20,12 @@
 | IA-3 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Network Sniffing	| Credential Access | T1040 | https://attack.mitre.org/wiki/Technique/T1040 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://pen-testing.sans.org/blog/2013/04/25/smb-relay-demystified-and-ntlmv2-pwnage-with-python |

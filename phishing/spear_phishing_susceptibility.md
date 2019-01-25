@@ -17,12 +17,12 @@
 | AT-2 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Spear phishing messages with malicious links | Launch | PRE-T1146 | https://attack.mitre.org/pre-attack/index.php/Technique/PRE-T1146 |
 
-### Finding Refrences 
+### Finding References 
 | URL |
 |:-:|
 | https://www.us-cert.gov/report-phishing |
