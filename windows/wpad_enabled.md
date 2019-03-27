@@ -20,12 +20,12 @@
 | IA-3 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 |  Exploitation of Vulnerability | Credential Access, Defense Evasion, Lateral Movement, Privilege Escalation |	T1068 | https://attack.mitre.org/wiki/Technique/T1068 | 
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://www.trustedsec.com/2013/07/wpad-man-in-the-middle-clear-text-passwords/ |

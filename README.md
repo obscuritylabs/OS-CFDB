@@ -62,7 +62,7 @@ The data within this project is broken out into multiple headers and lists; this
 
 - Description - The technical overview of a finding, this is not meant to be all-inclusive.
 - Impact - A section of a how the result will affect an organization.
-- Recommendation(s) - Current plan of action to impment.
+- Recommendation(s) - Current plan of action to implement.
 
 ### Finding Metadata
 
@@ -74,7 +74,7 @@ The data within this project is broken out into multiple headers and lists; this
 ## How the Data is Supplied
 
 - JSON - Will allow for serializable data structures or integration into many other solutions.
--- **CURRENTLY UNDER DEVLOPMENT** 
+-- **CURRENTLY UNDER DEVELOPMENT** 
 - MD - MarkDown is a way to display structured text and allow readers to view the findings quickly.
 
 ## Finding Classification and Scoring
@@ -98,7 +98,7 @@ Each finding has a provided OS-CFDB ID to provide a Unique ID to each finding:
 |     Windows      | OS-CFDB-1***|
 |     MacOS        | OS-CFDB-2***|
 |     Linux        | OS-CFDB-3***|
-|     Andriod      | OS-CFDB-4***|
+|     Android      | OS-CFDB-4***|
 |     IOS          | OS-CFDB-5***|
 |     Web          | OS-CFDB-6***|
 |     Phishing     | OS-CFDB-7***|

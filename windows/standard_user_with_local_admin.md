@@ -17,12 +17,12 @@
 | AC-6 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Bypass User Account Control | 	Defense Evasion, Privilege Escalation | T1088 | https://attack.mitre.org/wiki/Technique/T1088 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://technet.microsoft.com/en-us/library/dd744293(v=ws.10).aspx |

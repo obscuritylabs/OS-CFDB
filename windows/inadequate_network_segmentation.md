@@ -18,12 +18,12 @@
 | SC-7  |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Exfiltration Over Command and Control Channel | Exfiltration |  T1041 | https://attack.mitre.org/wiki/Technique/T1041 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://www.cisco.com/c/en/us/about/security-center/framework-segmentation.html |

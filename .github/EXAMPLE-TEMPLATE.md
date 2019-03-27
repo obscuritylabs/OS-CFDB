@@ -17,12 +17,12 @@
 | IA-2  |
 |  IA-7 |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Tactic | ID |
 |:-:|:-:|
 | Credential Access | T1081 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://adsecurity.org/?p=2288 |

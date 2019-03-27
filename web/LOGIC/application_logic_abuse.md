@@ -24,12 +24,12 @@
 | CA-7 | 
 | CA-8 |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Exploit Public-Facing Application | Initial Access | T1190 | https://attack.mitre.org/wiki/Technique/T1190 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://www.owasp.org/index.php/Testing_for_business_logic |
@@ -54,7 +54,7 @@ In business logic data validation testing, we verify that the application does n
 
 #### Test Ability to forge requests (OTG-BUSLOGIC-002)
 
-In forged and predictive parameter request testing, we verify that the application does not allow users to submit or alter data to any component of the system that they should not have access to, are accessing at that particular time or in that particular manner. This is important because without this safeguard attackers may be able to “fool/trick” the application into letting them into sections of thwe application of system that they should not be allowed in at that particular time, thus circumventing the applications business logic workflow.
+In forged and predictive parameter request testing, we verify that the application does not allow users to submit or alter data to any component of the system that they should not have access to, are accessing at that particular time or in that particular manner. This is important because without this safeguard attackers may be able to “fool/trick” the application into letting them into sections of the application of system that they should not be allowed in at that particular time, thus circumventing the applications business logic workflow.
 
 
 #### Test Integrity Checks (OTG-BUSLOGIC-003)

@@ -17,12 +17,12 @@
 | SI-13 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Credentials in Files | Credential Access | T1081 | https://attack.mitre.org/wiki/Technique/T1081 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 |https://www.sans.org/reading-room/whitepapers/authentication/clear-text-password-risk-assessment-documentation-113  |

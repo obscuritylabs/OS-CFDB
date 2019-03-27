@@ -18,12 +18,12 @@
 | IA-7 |
 
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Brute Force | Credential Access  | T1110 | https://attack.mitre.org/wiki/Technique/T1110 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://technet.microsoft.com/en-us/library/cc731699(v=ws.11).aspx |

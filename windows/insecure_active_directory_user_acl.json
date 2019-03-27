@@ -3,7 +3,7 @@
     "findingDetails": {
       "findingMatrix":
         {
-          "title": "Insecure Active Direcotry User ACLs",
+          "title": "Insecure Active Directory User ACLs",
           "vsr": 5,
           "cvss": "8.0 – 10.0",
           "risk": "Critical",

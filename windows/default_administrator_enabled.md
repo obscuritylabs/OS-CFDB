@@ -19,12 +19,12 @@
 | IA-2 |
 | IA-3 |
 
-### Finding MITRE ATT&CK Corelation
+### Finding MITRE ATT&CK Correlation
 | Name | Tactic | ID | Link |
 |:-:|:-:|:-:|:-:|
 | Pass the Hash | Lateral Movement | T1075 | https://attack.mitre.org/wiki/Technique/T1075 |
 
-### Finding Refrences
+### Finding References
 | URL |
 |:-:|
 | https://nvd.nist.gov/800-53/Rev4/control/IA-2 |

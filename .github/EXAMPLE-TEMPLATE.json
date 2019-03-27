@@ -15,7 +15,7 @@
           "Service": "Internal Penetration Testing"
         },
         {
-          "Serivce": "External Penetration Testing"
+          "Service": "External Penetration Testing"
         }
       ],
       "Finding NIST 800-53 Controls" : [
@@ -26,7 +26,7 @@
           "NIST": "IA-7"
         }
       ],
-      "Finding MITRE ATT&CK Corelation" : [
+      "Finding MITRE ATT&CK Correlation" : [
         {
           "Name": "Credentials in Files",
           "Tactic": "Credential Access",
@@ -34,7 +34,7 @@
           "Link": "https://attack.mitre.org/wiki/Technique/T1081"
         }  
       ],
-      "Finding Refrences": [
+      "Finding References": [
         {
           "URL": "https://adsecurity.org/?p=2288"
         }
