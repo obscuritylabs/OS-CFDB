@@ -22,6 +22,17 @@
 |:-:|:-:|
 | Credential Access | T1081 |
 
+### Finding CWE
+| Weakness Name | ID |
+|:-:|:-:|
+| Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') | 79 |
+
+### Finding CAPEC
+| Attack Pattern Name | ID |
+|:-:|:-:|
+| XSS Using MIME Type Mismatch | 209 |
+| DOM-Based XSS | 588 |
+
 ### Finding References
 | URL |
 |:-:|

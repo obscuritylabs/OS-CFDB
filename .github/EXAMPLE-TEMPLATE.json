@@ -7,7 +7,7 @@
           "VSR": 3,
           "CVSS": "4.0-5.9",
           "Risk": "Medium",
-          "ID": "OS-CFDB-0",
+          "ID": "OS-CFDB-0"
         }
       ],
       "Finding Service": [
@@ -16,6 +16,9 @@
         },
         {
           "Service": "External Penetration Testing"
+        },
+        {
+          "Service": "Application Security Engagement"
         }
       ],
       "Finding NIST 800-53 Controls" : [
@@ -33,6 +36,23 @@
           "ID": "T1081",
           "Link": "https://attack.mitre.org/wiki/Technique/T1081"
         }  
+      ],
+      "finding_cwe_correlation" : [
+        {
+          "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "id": 79
+        }
+      ],
+      "finding_capec_correlation" : [
+        {
+          "name": "XSS Using MIME Type Mismatch",
+          "id": 209
+        },
+        {
+
+          "name": "OM-Based XSS",
+          "id": 588
+        }
       ],
       "Finding References": [
         {
