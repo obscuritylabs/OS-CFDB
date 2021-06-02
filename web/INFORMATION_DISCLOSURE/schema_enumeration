@@ -3,7 +3,7 @@
 ### Finding Matrix
 | Title  | VSR  |  CVSS  | Risk |
 |:-:|:-:|:-:|:-:|
-| Database Information Disclosure  | 1-5  |  0.0-10.0 | Low-Medium  |
+| Database Schema Enumeration  | 1-5  |  0.0-10.0 | Low-Medium  |
 
 ### Finding Service
 | Service  |
