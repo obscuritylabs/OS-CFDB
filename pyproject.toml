@@ -1,0 +1,116 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool]
+
+[tool.black]
+line-length = 120
+
+[tool.coverage]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if __name__ == .__main__.:",
+]
+fail_under = 100
+show_missing = true
+skip_covered = true
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+concurrency = ["multiprocessing"]
+parallel = true
+source = ["src"]
+
+[tool.flake8]
+docstring_style = "google"
+exclude = [".git", ".venv", "__pycache__", "build", "dist", "setup.py"]
+ignore = ["B506", "D100", "D104", "S101"]
+max-complexity = 10
+max_line_length = 120
+strictness = "full"
+
+[tool.isort]
+atomic = true
+combine_as_imports = true
+line_length = 120
+profile = "black"
+
+[tool.mypy]
+plugins = "pydantic.mypy"
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+strict = true
+
+[tool.poetry]
+authors = ["Obscurity Labs <admin@obscuritylabs.com>"]
+description = ""
+name = "os-cfdb"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+beanie = "^1.10.3"
+fastapi = "^0.75.0"
+python = "^3.10"
+uvicorn = {version = "^0.17.6", extras = ["standard"]}
+dnspython = "^2.2.1"
+fastapi-users = {version = "^10.0.2", extras = ["beanie"]}
+
+[tool.poetry.dev-dependencies]
+autoflake = "^1.4"
+black = "^22.1.0"
+cohesion = "^1.0.0"
+commitizen = "^2.21.2"
+darglint = "^1.8.1"
+dlint = "^0.12.0"
+flake8 = "^4.0.1"
+flake8-bandit = "^3.0.0"
+flake8-bugbear = "^22.3.20"
+flake8-commas = "^2.1.0"
+flake8-comprehensions = "^3.8.0"
+flake8-debugger = "^4.0.0"
+flake8-docstrings = "^1.6.0"
+flake8-eradicate = "^1.2.0"
+isort = "^5.10.1"
+mypy = "^0.941"
+pre-commit = "^2.17.0"
+pyproject-flake8 = "^0.0.1-alpha.2"
+pytest = "^7.1.1"
+pytest-clarity = "^1.0.1"
+pytest-cov = "^3.0.0"
+pytest-sugar = "^0.9.4"
+python-semantic-release = "^7.27.0"
+pyupgrade = "^2.31.1"
+safety = "^1.10.3"
+vulture = "^2.3"
+
+[tool.pytest.ini_options]
+addopts = "--no-header -p no:warnings -ra -q --cov=src/"
+norecursedirs = [".*", "*.egg", "build", "dist"]
+testpaths = ["tests/"]
+
+[tool.semantic_release]
+branch = "master"
+build_command = "poetry build"
+commit_subject = "chore(release): Release v{version} [skip ci]"
+commit_version_number = true
+pre_commit_command = "poetry run pre-commit run --all-files"
+prerelease_tag = "alpha"
+upload_to_pypi = true
+upload_to_release = true
+upload_to_repository = true
+version_source = "commit"
+version_toml = "pyproject.toml:tool.poetry.version"
+
+[tool.vulture]
+min_confidence = 80
+paths = ["src", "tests"]
+sort_by_size = true
+verbose = true

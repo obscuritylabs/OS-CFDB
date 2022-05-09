@@ -1,0 +1,30 @@
+{
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": ".venv/bin/pflake8",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.extraPaths": ["./src"],
+  "editor.formatOnSave": true,
+  "python.testing.pytestPath": ".venv/bin/pytest",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.mypyPath": ".venv/bin/mypy",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": ".venv/bin/black",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "cSpell.words": [
+    "autoflake",
+    "commitizen",
+    "isort",
+    "mypy",
+    "pymongo",
+    "pyupgrade"
+  ]
+}

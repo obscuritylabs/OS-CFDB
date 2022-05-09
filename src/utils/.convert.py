@@ -1,6 +1,6 @@
-import os
 import json
- 
+import os
+
 # The top argument for walk
 topdir = '.'
  

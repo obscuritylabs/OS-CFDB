@@ -1,0 +1,51 @@
+repos:
+  - repo: local
+    hooks:
+      - id: autoflake
+        name: autoflake8
+        language: system
+        types: [python]
+        entry: .venv/bin/autoflake
+
+      - id: pyupgrade
+        name: pyupgrade
+        language: system
+        types: [python]
+        entry: .venv/bin/pyupgrade
+
+      - id: isort
+        name: isort
+        language: system
+        types: [python]
+        entry: .venv/bin/isort
+
+      - id: black
+        name: black
+        language: system
+        types: [python]
+        entry: .venv/bin/black
+
+      - id: flake8
+        name: flake8
+        language: system
+        types: [python]
+        entry: .venv/bin/pflake8
+
+      - id: mypy
+        name: mypy
+        language: system
+        types: [python]
+        entry: .venv/bin/mypy
+
+      - id: vulture
+        name: vulture
+        language: system
+        types: [python]
+        entry: .venv/bin/vulture
+
+      - id: commitizen
+        name: commitizen
+        language: system
+        entry: .venv/bin/cz
+        args: ["check", "--commit-msg-file"]
+        stages: [commit-msg]

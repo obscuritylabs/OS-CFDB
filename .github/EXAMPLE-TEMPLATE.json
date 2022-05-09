@@ -29,7 +29,8 @@
           "NIST": "IA-7"
         }
       ],
-      "Finding MITRE ATT&CK Correlation" : [
+      "Finding MITRE 
+       Correlation" : [
         {
           "Name": "Credentials in Files",
           "Tactic": "Credential Access",

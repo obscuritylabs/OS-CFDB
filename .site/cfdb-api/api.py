@@ -1,33 +1,22 @@
-from flask import Flask
-from flask import url_for
-from flask import jsonify
-from flask import make_response
-from flask import abort
-from flask import request
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from flask_apscheduler import APScheduler
-from flask_caching import Cache
-
+import config
 import psutil
 import pymongo
+from flask import Flask, abort, jsonify, make_response, request, url_for
+from flask_apscheduler import APScheduler
+from flask_caching import Cache
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
-import config
-
-__API_VERSION = 'api/v1'
+__API_VERSION = "api/v1"
 
 # init flask app
 app = Flask(__name__)
 # setup all config vars
-app.config.from_object('config')
+app.config.from_object("config")
 # init rates
-limiter = Limiter(
-    app,
-    key_func=get_remote_address,
-    default_limits=["60 per minute"]
-)
+limiter = Limiter(app, key_func=get_remote_address, default_limits=["60 per minute"])
 # setup pymongo backend
-client = pymongo.MongoClient(app.config['MONGODB_URL'])
+client = pymongo.MongoClient(app.config["MONGODB_URL"])
 db = client.api
 # TODO: setup redis cron
 #  scheduler = APScheduler()
@@ -37,7 +26,9 @@ db = client.api
 cache = Cache(app)
 
 
-def make_cache_key(*args, **kwargs): return request.url
+def make_cache_key(*args, **kwargs):
+    return request.url
+
 
 # custom rate limit response
 
@@ -55,9 +46,7 @@ def ratelimit_handler(e):
     Returns:
         json -- ratelimit exceeded
     """
-    return make_response(
-        jsonify(error="ratelimit exceeded %s" % e.description), 429
-    )
+    return make_response(jsonify(error="ratelimit exceeded %s" % e.description), 429)
 
 
 @app.errorhandler(404)
@@ -76,12 +65,16 @@ def ratelimit_handler(e):
         json -- url_unkown
     """
     return make_response(
-        jsonify({'error': {
-                'id': 'url_unkown',
-                'code': 404,
-                'details': e.description,
+        jsonify(
+            {
+                "error": {
+                    "id": "url_unkown",
+                    "code": 404,
+                    "details": e.description,
                 }
-        }), 404
+            }
+        ),
+        404,
     )
 
 
@@ -99,16 +92,20 @@ def crit_error_handler(e):
         json -- server_error
     """
     return make_response(
-        jsonify({'error': {
-                'id': 'server_error',
-                'code': 500,
-                'details': e.description,
+        jsonify(
+            {
+                "error": {
+                    "id": "server_error",
+                    "code": 500,
+                    "details": e.description,
                 }
-        }), 500
+            }
+        ),
+        500,
     )
 
 
-@app.route('/%s/status/' % (__API_VERSION), methods=['GET'])
+@app.route("/%s/status/" % (__API_VERSION), methods=["GET"])
 @cache.cached(timeout=5)
 @limiter.limit("30/minute")
 def get_status():
@@ -130,13 +127,13 @@ def get_status():
         abort(500)
 
 
-@app.route('/%s/load/' % (__API_VERSION), methods=['GET'])
+@app.route("/%s/load/" % (__API_VERSION), methods=["GET"])
 @cache.cached(timeout=5)
 @limiter.limit("60/minute")
 def get_load():
     """Server CPU precent load.
 
-    Uses psutil to check load of server, useful for front end 
+    Uses psutil to check load of server, useful for front end
     user debugging.
         > curl 'http://127.0.0.1:8080/api/v1/load'
 
@@ -154,14 +151,14 @@ def get_load():
         abort(500)
 
 
-@app.route('/%s/retrive/finding/id/search' % (__API_VERSION), methods=['GET'])
+@app.route("/%s/retrive/finding/id/search" % (__API_VERSION), methods=["GET"])
 @cache.cached(timeout=60, key_prefix=make_cache_key)
 @limiter.limit("120/minute")
 def search_finding_id():
     """Search regex of OS-CFDB ID's.
 
-    Uses pymongo regex on Finding Matrix.ID for front-end 
-    type ahead within VUE. 
+    Uses pymongo regex on Finding Matrix.ID for front-end
+    type ahead within VUE.
     Example as follows:
         > curl 'http://127.0.0.1:8080/api/v1/retrive/finding/id/search?id=OS-CFDB'
 
@@ -175,26 +172,28 @@ def search_finding_id():
     """
     try:
         temp = []
-        f_id = '^' + str(request.args.get('id'))
-        cursor = db.findings.find({"finding.findingDetails.findingMatrix.id": {
-                                  "$regex": f_id}}, {"_id": True, 'finding.findingDetails.findingMatrix': True}).limit(10)
+        f_id = "^" + str(request.args.get("id"))
+        cursor = db.findings.find(
+            {"finding.findingDetails.findingMatrix.id": {"$regex": f_id}},
+            {"_id": True, "finding.findingDetails.findingMatrix": True},
+        ).limit(10)
         for x in cursor:
-            temp.append({'id': str(x['_id']), 'data': x['finding']})
+            temp.append({"id": str(x["_id"]), "data": x["finding"]})
         return make_response(jsonify(temp), 200)
     except:
         abort(500)
 
 
-@app.route('/%s/retrive/finding/title/search' % (__API_VERSION), methods=['GET'])
+@app.route("/%s/retrive/finding/title/search" % (__API_VERSION), methods=["GET"])
 @cache.cached(timeout=60, key_prefix=make_cache_key)
 @limiter.limit("120/minute")
 def search_finding_title():
     """Search regex of finding title.
 
-    Uses pymongo regex on Finding Matrix.ID for front-end 
-    type ahead within VUE. 
+    Uses pymongo regex on Finding Matrix.ID for front-end
+    type ahead within VUE.
     Example as follows:
-        > curl 'http://127.0.0.1:8080/api/v1/retrive/finding/title/search?title=Insecure' 
+        > curl 'http://127.0.0.1:8080/api/v1/retrive/finding/title/search?title=Insecure'
 
     Decorators:
         app.route -- Flask route
@@ -206,17 +205,19 @@ def search_finding_title():
     """
     try:
         temp = []
-        f_title = '^' + str(request.args.get('title'))
-        cursor = db.findings.find({"finding.findingDetails.findingMatrix.title": {
-                                  "$regex": f_title}}, {"_id": True, 'finding.findingDetails.findingMatrix': True}).limit(10)
+        f_title = "^" + str(request.args.get("title"))
+        cursor = db.findings.find(
+            {"finding.findingDetails.findingMatrix.title": {"$regex": f_title}},
+            {"_id": True, "finding.findingDetails.findingMatrix": True},
+        ).limit(10)
         for x in cursor:
-            temp.append({'id': str(x['_id']), 'data': x['finding']})
+            temp.append({"id": str(x["_id"]), "data": x["finding"]})
         return make_response(jsonify(temp), 200)
     except:
         abort(500)
 
 
-@app.route('/%s/retrive/finding/id' % (__API_VERSION), methods=['GET'])
+@app.route("/%s/retrive/finding/id" % (__API_VERSION), methods=["GET"])
 @cache.cached(timeout=60, key_prefix=make_cache_key)
 @limiter.limit("60/minute")
 def get_finding():
@@ -239,9 +240,8 @@ def get_finding():
         [type] -- [description]
     """
     try:
-        f_id = str(request.args.get('id'))
-        document = db.findings.find_one(
-            {'finding.findingDetails.findingMatrix.id': f_id}, {'_id': False})
+        f_id = str(request.args.get("id"))
+        document = db.findings.find_one({"finding.findingDetails.findingMatrix.id": f_id}, {"_id": False})
         if not document:
             return make_response(jsonify({"data": {}}), 200)
         return make_response(jsonify({"data": document}), 200)
@@ -249,6 +249,6 @@ def get_finding():
         abort(500)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # DEBUG: builds
     app.run(host="127.0.0.1", port=8080)

@@ -1,0 +1,16 @@
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"VARIANT": "3.10-bullseye",
+			"NODE_VERSION": "none"
+		}
+	},
+	"extensions": [
+		"ObscurityLabs.obscuritylabs-development-pack"
+	],
+	"postCreateCommand": "make",
+	"remoteUser": "vscode"
+}
